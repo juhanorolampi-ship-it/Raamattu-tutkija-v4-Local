@@ -1,4 +1,8 @@
+# Streamlit-käyttöliittymä
 streamlit
-python-docx
-PyPDF2
-requests
+
+# Vektorihakuun ja datan käsittelyyn
+faiss-cpu
+sentence-transformers
+torch
+numpy
