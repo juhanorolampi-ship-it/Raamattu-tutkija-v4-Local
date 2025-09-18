@@ -1,0 +1,277 @@
+
+================================================================================
+         RAAMATTU-TUTKIJA v4 - DIAGNOSTIIKKA (Kontekstuaalinen indeksi)         
+================================================================================
+
+Löytyi 11 osiota käsiteltäväksi tiedostosta 'syote.txt'.
+--- Käsittelyssä osio 1/11: 1 ---
+Hakuaihe (yhdistetty): '1. Johdanto: Kutsu vaatii viisautta ja erottamiskykyä: Johdatus aiheeseen. Vaikka olemme osa Jumalan suurta kutsua, kaikki "lampaan vaatteissa" kulkevat eivät ole lampaita. Tarve hengelliselle erottamiskyvylle ja viisaudelle lauman suojelemiseksi.'
+Ladataan hakumalli, indeksi ja datatiedostot muistiin...
+Use pytorch device_name: cpu
+Load pretrained SentenceTransformer: TurkuNLP/sbert-cased-finnish-paraphrase
+Kaikki resurssit ladattu onnistuneesti.
+Haku valmis. Kesto: 3.1733 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 2/11: 2.1 ---
+Hakuaihe (yhdistetty): '2.1 Tunnistusmerkit: Mistä tunnemme väärät opettajat ja eksyttäjät?: Raamatun antamat konkreettiset tuntomerkit harhaopettajista: heidän motiivinsa (ahneus, valta), metodinsa (mielistely, ovelat sanat, hajaannuksen luominen) ja hedelmänsä (moraalittomuus, eriseurat).'
+Haku valmis. Kesto: 0.0555 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 3/11: 2.2 ---
+Hakuaihe (yhdistetty): '2.2 Raamatulliset esimerkit: Varoittavia esimerkkejä Vanhasta ja Uudesta testamentista.: Esimerkkejä henkilöistä ja ryhmistä, jotka eksyttivät Jumalan kansaa.'
+Haku valmis. Kesto: 0.0438 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 4/11: 2.3 ---
+Hakuaihe (yhdistetty): '2.3 Toimintaohjeet: Miten Raamattu käskee meitä toimimaan kohdatessamme selkeän harhaopin?: Selkeät käskyt ja ohjeet, jotka koskevat suhtautumista niihin, jotka tietoisesti vääristävät evankeliumia.'
+Haku valmis. Kesto: 0.0435 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 5/11: 3.1 ---
+Hakuaihe (yhdistetty): '3.1 Eri mittapuut: Miten suhtautumisemme heikkoon veljeen eroaa suhtautumisestamme eksyttäjään?: Raamatullinen periaate siitä, että susia kohdellaan eri tavalla kuin eksyneitä tai heikkoja lampaita. Kärsivällisyyden ja rakkaudellisen ojentamisen merkitys.'
+Haku valmis. Kesto: 0.0485 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 6/11: 3.2 ---
+Hakuaihe (yhdistetty): '3.2 Kasvun prosessi: Muistutus siitä, että jokainen uskova on matkalla ja tarvitsee armoa.: Viittaus "Kunnioita kutsua" -opetuksen henkeen. Jokainen uskova on keskeneräinen ja tarvitsee tilaa kasvaa. Hengellinen kypsymättömyys ei ole sama asia kuin tietoinen kapina tai eksytys.'
+Haku valmis. Kesto: 0.0487 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 7/11: 4.1 ---
+Hakuaihe (yhdistetty): '4.1 Kiitollisuus hedelmästä: Oikea lähtökohta on ilo pelastuneista.: Miten tunnistaa ja iloita Jumalan työstä silloinkin, kun se tapahtuu meidän näkökulmastamme epätäydellisissä olosuhteissa?'
+Haku valmis. Kesto: 0.0435 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 8/11: 4.2 ---
+Hakuaihe (yhdistetty): '4.2 Rakkaudellinen asenne, ei sormella osoittelu: Miten lähestymme nuoria uskovia?: Vanhempien uskovien rooli isinä ja äiteinä uskossa. Kuinka välttää nuoren uskoninnon ja evankelioimispalon sammuttaminen, vaikka taustoissa olisikin huolenaiheita?'
+Haku valmis. Kesto: 0.0493 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 9/11: 4.3 ---
+Hakuaihe (yhdistetty): '4.3 Pitkäjänteinen opetuslapseuttaminen: Mikä on kestävä ratkaisu?: Terveen opin ja raamatuntuntemuksen juurruttaminen kärsivällisesti ja rakkaudellisesti. Akylaksen ja Priskillan esimerkki Apolloksen kanssa.'
+Haku valmis. Kesto: 0.0513 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 10/11: 4.4 ---
+Hakuaihe (yhdistetty): '4.4 Viisaus taustojen kanssa: Miten arvioida liikkeitä (YWAM, Circuit Riders, Carry the love, SEND jne.) tuomitsematta hedelmää?: Miten erottaa toisistaan Jumalan aito työ, inhimilliset ylilyönnit ja mahdolliset opilliset vaarat? Periaate: "koetelkaa kaikki, pitäkää se, mikä hyvää on".'
+Haku valmis. Kesto: 0.0566 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+--- Käsittelyssä osio 11/11: 5 ---
+Hakuaihe (yhdistetty): '5. Yhteenveto: Totuus rakkaudessa: Loppuyhteenveto, joka korostaa tasapainoa: meidän on oltava lujia totuudessa ja valppaita eksytystä vastaan, mutta samalla äärimmäisen armollisia, rakastavia ja kärsivällisiä niitä kohtaan, jotka ovat vasta matkansa alussa. Kutsumuksemme on sekä suojella laumaa että hoivata karitsoita.'
+Haku valmis. Kesto: 0.0550 sekuntia. Löydettiin 15 jaetta.
+Löytyi 15 relevanttia jaetta.
+----------------------------------------
+
+================================================================================
+                            DIAGNOSTIIKAN YHTEENVETO                            
+================================================================================
+
+Kokonaiskesto: 3.68 sekuntia.
+Löydetty yhteensä 149 uniikkia jaetta.
+
+================================================================================
+                         YKSITYISKOHTAINEN JAEJAOTTELU                          
+================================================================================
+
+
+--- 1 Osio 1 ---
+
+- Hesekiel 34:17: "Mutta te, minun lampaani! Näin sanoo Herra, Herra: Katso, minä tahdon tuomita lampaan ja lampaan, oinasten ja vuohipukkien välillä."
+- Hesekiel 34:16: "Kadonneet minä tahdon etsiä, eksyneet tuoda takaisin, haavoittuneet sitoa, heikkoja vahvistaa; mutta lihavat ja väkevät minä hävitän. Minä kaitsen niitä niin, kuin oikein on."
+- 1. Korinttilaiskirje 7:16: "Sillä mistä tiedät, vaimo, voitko pelastaa miehesi? Tai mistä tiedät, mies, voitko pelastaa vaimosi?"
+- Johannes 10:12: "Mutta palkkalainen, joka ei ole paimen ja jonka omia lampaat eivät ole, kun hän näkee suden tulevan, niin hän jättää lampaat ja pakenee; ja susi ryöstää ja hajottaa ne."
+- 4. Mooseksen kirja 27:18: "Ja Herra sanoi Moosekselle: "Ota Joosua, Nuunin poika, mies, jossa on Henki, ja pane kätesi hänen päällensä."
+- 4. Mooseksen kirja 27:17: "joka heidän edellänsä lähtee ja joka heidän edellänsä tulee, joka saattaa heidät lähtemään ja tulemaan, ettei Herran seurakunta olisi niinkuin lammaslauma, jolla ei ole paimenta"."
+- Johannes 10:13: "Hän pakenee, sillä hän on palkattu eikä välitä lampaista."
+- Johannes 10:14: "Minä olen se hyvä paimen, ja minä tunnen omani, ja minun omani tuntevat minut,"
+- Apostolien teot 20:28: "Ottakaa siis itsestänne vaari ja kaikesta laumasta, johon Pyhä Henki on teidät pannut kaitsijoiksi, paimentamaan Herran seurakuntaa, jonka hän omalla verellänsä on itselleen ansainnut."
+- 1. Korinttilaiskirje 7:8: "Naimattomille ja leskille minä taas sanon: heille on hyvä, jos pysyvät sellaisina kuin minäkin;"
+- Galatalaiskirje 5:8: "Houkutus siihen ei ole hänestä, joka teitä kutsuu."
+- 4. Mooseksen kirja 27:16: ""Asettakoon Herra, Jumala, jonka vallassa on kaiken lihan henki, tämän seurakunnan johtoon miehen,"
+- Johannes 10:2: "Mutta joka menee ovesta sisälle, se on lammasten paimen."
+- Luukas 11:51: "hamasta Aabelin verestä Sakariaan vereen saakka, hänen, joka surmattiin alttarin ja temppelin välillä'. Niin, minä sanon teille, se pitää tältä sukukunnalta vaadittaman."
+- Jesaja 30:15: "Sillä näin sanoo Herra, Herra, Israelin Pyhä: Kääntymällä ja pysymällä hiljaa te pelastutte, rauhallisuus ja luottamus on teidän väkevyytenne; mutta te ette tahtoneet,"
+
+--- 2.1 Osio 2.1 ---
+
+- Jeremia 8:9: "Viisaat saavat häpeän, kauhistuvat ja joutuvat kiinni. Katso, he ovat hyljänneet Herran sanan — mitä heillä on viisautta?"
+- 2. Pietarin kirje 2:1: "Mutta myös valheprofeettoja oli kansan seassa, niinkuin teidänkin keskuudessanne on oleva valheenopettajia, jotka salaa kuljettavat sisään turmiollisia harhaoppeja, kieltävätpä Herrankin, joka on heidät ostanut, ja tuottavat itselleen äkillisen perikadon."
+- 2. Pietarin kirje 1:21: "sillä ei koskaan ole mitään profetiaa tuotu esiin ihmisen tahdosta, vaan Pyhän Hengen johtamina ihmiset ovat puhuneet sen, minkä saivat Jumalalta."
+- Roomalaiskirje 16:18: "Sillä sellaiset eivät palvele meidän Herraamme Kristusta, vaan omaa vatsaansa, ja he pettävät suloisilla sanoilla ja kauniilla puheilla vilpittömien sydämet."
+- Efesolaiskirje 5:6: "Älköön kukaan pettäkö teitä tyhjillä puheilla, sillä semmoisten tähden kohtaa Jumalan viha tottelemattomuuden lapsia;"
+- 2. Pietarin kirje 2:2: "Ja moni on seuraava heidän irstauksiaan, ja heidän tähtensä totuuden tie tulee häväistyksi;"
+- Galatalaiskirje 5:20: "epäjumalanpalvelus, noituus, vihamielisyys, riita, kateellisuus, vihat, juonet, eriseurat, lahkot,"
+- Matteus 24:24: "Sillä vääriä kristuksia ja vääriä profeettoja nousee, ja he tekevät suuria tunnustekoja ja ihmeitä, niin että eksyttävät, jos mahdollista, valitutkin."
+- Sananlaskut 8:8: "Vanhurskaat ovat minun suuni sanat kaikki, ei ole niissä mitään petollista, ei väärää."
+- Hesekiel 33:30: "Ja sinä, ihmislapsi! Sinun kansasi lapset puhuvat sinusta seinänvierustoilla ja talojen ovilla ja sanovat keskenään, toinen toisellensa, näin: 'Lähtekää kuulemaan, millainen sana nyt on tullut Herralta'."
+- Jooel 1:1: "Herran sana, joka tuli Jooelille, Petuelin pojalle."
+- Roomalaiskirje 16:17: "Mutta minä kehoitan teitä, veljet, pitämään silmällä niitä, jotka saavat aikaan erimielisyyttä ja pahennusta vastoin sitä oppia, jonka te olette saaneet; vetäytykää pois heistä."
+- Hoosea 14:10: "Kuka on viisas ja ymmärtää nämä? Kuka taitava ja käsittää nämä? Sillä Herran tiet ovat suorat: vanhurskaat niillä vaeltavat, mutta luopiot niillä kompastuvat."
+- Luukas 6:46: "Miksi te huudatte minulle: 'Herra, Herra!' ettekä tee, mitä minä sanon?"
+- Jaakobin kirje 3:14: "Mutta jos teillä on katkera kiivaus ja riitaisuus sydämessänne, niin älkää kerskatko älkääkä valhetelko totuutta vastaan."
+
+--- 2.2 Osio 2.2 ---
+
+- Jooel 1:1: "Herran sana, joka tuli Jooelille, Petuelin pojalle."
+- 2. Pietarin kirje 2:22: "Heille on tapahtunut, mitä tosi sananlasku sanoo: "Koira palaa oksennukselleen", ja: "Pesty sika rypee rapakossa"."
+- 1. Korinttilaiskirje 15:34: "Raitistukaa oikealla tavalla, älkääkä syntiä tehkö; sillä niitä on, joilla ei ole mitään tietoa Jumalasta. Teidän häpeäksenne minä tämän sanon."
+- Matteus 24:25: "Katso, minä olen sen teille edeltä sanonut."
+- Tiituskirje 3:9: "Mutta vältä mielettömiä riitakysymyksiä ja sukuluetteloita ja kinastelua ja kiistoja laista, sillä ne ovat hyödyttömiä ja turhia."
+- 5. Mooseksen kirja 9:15: "Silloin minä käännyin ja astuin alas vuorelta, vuoren palaessa tulena; ja minulla oli käsissäni ne kaksi liitontaulua."
+- Markus 13:22: "Sillä vääriä kristuksia ja vääriä profeettoja nousee, ja he tekevät tunnustekoja ja ihmeitä, eksyttääkseen, jos mahdollista, valitut."
+- Luukas 9:56: "Ja he vaelsivat toiseen kylään."
+- 5. Mooseksen kirja 31:29: "Sillä minä tiedän, että te minun kuoltuani vaellatte kelvottomasti ja poikkeatte siltä tieltä, jota minä käskin teidän vaeltaa. Sentähden on onnettomuus kohtaava teitä aikojen lopulla, kun te teette sitä, mikä on pahaa Herran silmissä, ja vihoitatte hänet kättenne teoilla.""
+- Matteus 24:24: "Sillä vääriä kristuksia ja vääriä profeettoja nousee, ja he tekevät suuria tunnustekoja ja ihmeitä, niin että eksyttävät, jos mahdollista, valitutkin."
+- 2. Pietarin kirje 2:21: "Parempi olisi heille ollut, etteivät olisi tulleet tuntemaan vanhurskauden tietä, kuin että sen tunnettuaan kääntyvät pois heille annetusta pyhästä käskystä."
+- Roomalaiskirje 16:17: "Mutta minä kehoitan teitä, veljet, pitämään silmällä niitä, jotka saavat aikaan erimielisyyttä ja pahennusta vastoin sitä oppia, jonka te olette saaneet; vetäytykää pois heistä."
+- Jeremia 18:10: "mutta jos se tekee sitä, mikä on pahaa minun silmissäni, eikä kuule minun ääntäni, niin minä kadun sitä hyvää, jota olin luvannut tehdä sille."
+- 5. Mooseksen kirja 4:9: "Ole vain varuillasi ja ota itsestäsi tarkka vaari, ettet unhota, mitä omin silmin olet nähnyt, ja ettei se lähde sinun sydämestäsi koko elinaikanasi, vaan että ilmoitat sen lapsillesi ja lastesi lapsille:"
+- Job 31:7: "Jos minun askeleeni poikkesivat tieltä ja minun sydämeni seurasi silmiäni tahi tahra tarttui minun käsiini,"
+
+--- 2.3 Osio 2.3 ---
+
+- 5. Mooseksen kirja 17:11: "Tee sen lain mukaan, minkä he sinulle opettavat, ja sen tuomion mukaan, minkä he sinulle julistavat, poikkeamatta oikealle tai vasemmalle siitä, mitä he sinulle ilmoittavat."
+- 2. Timoteuskirje 4:1: "Minä vannotan sinua Jumalan ja Kristuksen Jeesuksen edessä, joka on tuomitseva eläviä ja kuolleita, sekä hänen ilmestymisensä että hänen valtakuntansa kautta:"
+- Markus 8:32: "Ja tämän hän puhui peittelemättä. Silloin Pietari otti hänet erilleen ja rupesi häntä nuhtelemaan."
+- Jesaja 59:13: "me olemme luopuneet Herrasta ja kieltäneet hänet, vetäytyneet pois Jumalaamme seuraamasta, puhuneet sortoa ja kapinaa, kantaneet kohdussamme ja purkaneet sisimmästämme valheen sanoja."
+- Sananlaskut 8:8: "Vanhurskaat ovat minun suuni sanat kaikki, ei ole niissä mitään petollista, ei väärää."
+- Psalmit 119:129: "Ihmeelliset ovat sinun todistuksesi, sentähden minun sieluni ottaa niistä vaarin."
+- 2. Timoteuskirje 4:2: "saarnaa sanaa, astu esiin sopivalla ja sopimattomalla ajalla, nuhtele, varoita, kehoita, kaikella pitkämielisyydellä ja opetuksella."
+- Roomalaiskirje 3:7: "Sillä jos Jumalan totuus tulee minun valheeni kautta selvemmin julki hänen kirkkaudekseen, miksi sitten minutkin vielä syntisenä tuomitaan?"
+- Psalmit 119:105: "Sinun sanasi on minun jalkaini lamppu ja valkeus minun tielläni."
+- Tiituskirje 3:9: "Mutta vältä mielettömiä riitakysymyksiä ja sukuluetteloita ja kinastelua ja kiistoja laista, sillä ne ovat hyödyttömiä ja turhia."
+- Ilmestyskirja 2:6: "Mutta se sinulla on, että sinä vihaat nikolaiittain tekoja, joita myös minä vihaan."
+- Tiituskirje 2:1: "Mutta sinä puhu sitä, mikä terveeseen oppiin soveltuu:"
+- 5. Mooseksen kirja 17:10: "Ja tee sen sanan mukaan, minkä he sinulle ilmoittavat siinä paikassa, jonka Herra valitsee; ja noudata tarkoin kaikkea, mitä he sinulle opettavat."
+- Jesaja 30:11: "Poiketkaa tieltä, väistykää polulta; viekää pois silmistämme Israelin Pyhä.""
+- Efesolaiskirje 5:11: "älköönkä teillä olko mitään osallisuutta pimeyden hedelmättömiin tekoihin, vaan päinvastoin nuhdelkaakin niistä."
+
+--- 3.1 Osio 3.1 ---
+
+- Sakarja 13:7: "Heräjä, miekka, minun paimentani vastaan ja minun lähintä miestäni vastaan, sanoo Herra Sebaot. Lyö paimenta, ja joutukoot lampaat hajallensa; mutta minä käännän jälleen käteni pienimpiä kohden."
+- Saarnaaja 3:18: "Minä sanoin sydämessäni: Ihmislasten tähden se niin on, jotta Jumala heitä koettelisi ja he tulisivat näkemään, että he omassa olossaan ovat eläimiä."
+- 1. Johanneksen kirje 3:17: "Jos nyt jollakin on tämän maailman hyvyyttä ja hän näkee veljensä olevan puutteessa, mutta sulkee häneltä sydämensä, kuinka Jumalan rakkaus saattaa pysyä hänessä?"
+- Luukas 6:40: "Ei ole opetuslapsi opettajaansa parempi; täysin oppineena jokainen on oleva niinkuin hänen opettajansa."
+- 1. Johanneksen kirje 3:11: "Sillä tämä on se sanoma, jonka te olette alusta asti kuulleet, että meidän tulee rakastaa toinen toistamme"
+- 2. Korinttilaiskirje 6:14: "Älkää antautuko kantamaan vierasta iestä yhdessä uskottomien kanssa; sillä mitä yhteistä on vanhurskaudella ja vääryydellä? Tai mitä yhteyttä on valkeudella ja pimeydellä?"
+- 3. Johanneksen kirje 1:11: "Rakkaani, älä seuraa pahaa, vaan hyvää. Joka hyvin tekee, se on Jumalasta; joka pahoin tekee, se ei ole Jumalaa nähnyt."
+- Job 33:12: "Katso, sinä et ole oikeassa — niin minä vastaan sinulle — sillä Jumala on suurempi kuin ihminen."
+- Jeremia 9:3: "(2) He jännittävät valheeseen kielensä jousen, eivätkä käytä totuuteen valtaansa maassa; sillä he menevät pahuudesta pahuuteen, mutta minua he eivät tunne, sanoo Herra."
+- Jeremia 12:2: "Sinä heidät istutat, he myös juurtuvat; he kasvavat, kantavat myös hedelmää. Heidän suussansa sinä olet lähellä, mutta kaukana heidän sisimmästään."
+- Job 31:7: "Jos minun askeleeni poikkesivat tieltä ja minun sydämeni seurasi silmiäni tahi tahra tarttui minun käsiini,"
+- Roomalaiskirje 2:3: "Vai luuletko, ihminen, sinä, joka tuomitset niitä, jotka senkaltaisia tekevät, ja itse samoja teet, että sinä vältät Jumalan tuomion?"
+- Filippiläiskirje 3:16: "Kunhan vain, mihin saakka olemme ehtineetkin, vaellamme samaa tietä!"
+- Luukas 6:39: "Hän sanoi heille myös vertauksen: "Eihän sokea voi sokeaa taluttaa? Eivätkö molemmat lankea kuoppaan?"
+- Matteus 25:32: "Ja hänen eteensä kootaan kaikki kansat, ja hän erottaa toiset toisista, niinkuin paimen erottaa lampaat vuohista."
+
+--- 3.2 Osio 3.2 ---
+
+- 2. Timoteuskirje 2:23: "Mutta vältä tyhmiä ja taitamattomia väittelyjä, sillä tiedäthän, että ne synnyttävät riitoja."
+- Apostolien teot 20:31: "Valvokaa sentähden ja muistakaa, että minä olen kolme vuotta lakkaamatta yötä ja päivää kyynelin neuvonut teitä itsekutakin."
+- 1. Pietarin kirje 1:14: "Niinkuin kuuliaisten lasten tulee, älkää mukautuko niiden himojen mukaan, joissa te ennen, tietämättömyytenne aikana, elitte,"
+- 1. Timoteuskirje 4:11: "Tätä käske ja opeta."
+- Johannes 9:33: "Jos hän ei olisi Jumalasta, ei hän voisi mitään tehdä.""
+- Heprealaiskirje 12:14: "Pyrkikää rauhaan kaikkien kanssa ja pyhitykseen, sillä ilman sitä ei kukaan ole näkevä Herraa;"
+- Jesaja 64:4: "(3) Ei ole ikiajoista kuultu, ei ole korviin tullut, ei ole silmä nähnyt muuta Jumalaa, paitsi sinut, joka senkaltaisia tekisi häntä odottavalle."
+- Johannes 3:3: "Jeesus vastasi ja sanoi hänelle: "Totisesti, totisesti minä sanon sinulle: joka ei synny uudesti, ylhäältä, se ei voi nähdä Jumalan valtakuntaa"."
+- 2. Timoteuskirje 4:4: "ja kääntävät korvansa pois totuudesta ja kääntyvät taruihin."
+- 1. Pietarin kirje 1:13: "Vyöttäkää sentähden mielenne kupeet ja olkaa raittiit; ja pankaa täysi toivonne siihen armoon, joka teille tarjotaan Jeesuksen Kristuksen ilmestymisessä."
+- Juudaksen kirje 1:20: "Mutta te, rakkaani, rakentakaa itseänne pyhimmän uskonne perustukselle, rukoilkaa Pyhässä Hengessä"
+- Efesolaiskirje 4:15: "vaan että me, totuutta noudattaen rakkaudessa, kaikin tavoin kasvaisimme häneen, joka on pää, Kristus,"
+- 2. Timoteuskirje 2:24: "Mutta Herran palvelijan ei sovi riidellä, vaan hänen tulee olla lempeä kaikkia kohtaan, kyetä opettamaan ja pahaa kärsimään;"
+- Juudaksen kirje 1:19: "Nämä juuri saavat aikaan hajaannusta, he ovat sielullisia, henkeä heillä ei ole."
+- Roomalaiskirje 12:3: "Sillä sen armon kautta, mikä minulle on annettu, minä sanon teille jokaiselle, ettei tule ajatella itsestänsä enempää, kuin ajatella sopii, vaan ajatella kohtuullisesti, sen uskonmäärän mukaan, minkä Jumala on kullekin suonut."
+
+--- 4.1 Osio 4.1 ---
+
+- Matteus 5:7: "Autuaita ovat laupiaat, sillä he saavat laupeuden."
+- Job 22:18: "Ja kuitenkin hän oli täyttänyt heidän talonsa hyvyydellä. Mutta minusta on kaukana jumalattomain neuvo."
+- Matteus 5:8: "Autuaita ovat puhdassydämiset, sillä he saavat nähdä Jumalan."
+- Saarnaaja 5:19: "Sillä hän ei tule niin paljon ajatelleeksi elämänsä päiviä, kun Jumala suostuu hänen sydämensä iloon."
+- Saarnaaja 5:18: "Sekin on Jumalan lahja, jos Jumala kenelle ihmiselle antaa rikkautta ja tavaraa ja sallii hänen syödä siitä ja saada osansa ja iloita vaivannäkönsä ohessa."
+- 2. Korinttilaiskirje 9:12: "Sillä tämä avustamispalvelus ei ainoastaan poista pyhien puutteita, vaan käy vieläkin hedelmällisemmäksi Jumalalle annettujen monien kiitosten kautta,"
+- Jesaja 45:7: "minä, joka teen valkeuden ja luon pimeyden, joka tuotan onnen ja luon onnettomuuden; minä, Herra, teen kaiken tämän."
+- Matteus 5:9: "Autuaita ovat rauhantekijät, sillä heidät pitää Jumalan lapsiksi kutsuttaman."
+- 2. Samuelin kirja 23:5: "Eikö minun sukuni ole näin Jumalan edessä? Sillä hän on tehnyt minun kanssani iankaikkisen liiton, kaikin puolin taatun ja vakaan. Hän antaa versoa minulle kaiken autuuden ja kaiken ilon."
+- 1. Pietarin kirje 4:13: "vaan iloitkaa, sitä myöten kuin olette osallisia Kristuksen kärsimyksistä, että te myös hänen kirkkautensa ilmestymisessä saisitte iloita ja riemuita."
+- Filippiläiskirje 1:11: "täynnä vanhurskauden hedelmää, jonka Jeesus Kristus saa aikaan, Jumalan kunniaksi ja ylistykseksi."
+- Psalmit 50:22: "Ymmärtäkää tämä te, jotka Jumalan unhotatte, etten minä raatelisi, eikä olisi pelastajaa."
+- Psalmit 11:4: "Herra pyhässä temppelissänsä, Herra, jonka istuin on taivaassa — hänen silmänsä näkevät, hänen katseensa tutkii ihmislapset;"
+- Psalmit 14:1: "Veisuunjohtajalle; Daavidin virsi. Hullu sanoo sydämessänsä: "Ei ole Jumalaa". Turmiollinen ja iljettävä on heidän menonsa; ei ole ketään, joka tekee, mikä hyvää on."
+- Saarnaaja 8:16: "Kun minä käänsin sydämeni oppimaan viisautta ja katsomaan työtä, jota tehdään maan päällä saamatta untakaan silmiin päivällä tai yöllä,"
+
+--- 4.2 Osio 4.2 ---
+
+- 1. Tessalonikalaiskirje 4:13: "Mutta me emme tahdo pitää teitä, veljet, tietämättöminä siitä, kuinka poisnukkuneiden on, ettette murehtisi niinkuin muut, joilla ei toivoa ole."
+- 2. Korinttilaiskirje 5:12: "Emme nyt taas suosittele itseämme teille, vaan tahdomme antaa teille aihetta kerskata meistä, että teillä olisi mitä vastata niille, jotka kerskaavat siitä, mikä silmään näkyy, eikä siitä, mikä sydämessä on."
+- 1. Timoteuskirje 4:11: "Tätä käske ja opeta."
+- Apostolien teot 5:39: "mutta jos se on Jumalasta, niin te ette voi heitä kukistaa. Varokaa, ettei teitä ehkä havaittaisi sotiviksi itse Jumalaa vastaan.""
+- Markus 8:34: "Ja hän kutsui tykönsä kansan ynnä opetuslapsensa ja sanoi heille: "Jos joku tahtoo minun perässäni kulkea, hän kieltäköön itsensä ja ottakoon ristinsä ja seuratkoon minua."
+- Markus 9:24: "Ja heti lapsen isä huusi ja sanoi: "Minä uskon; auta minun epäuskoani"."
+- 1. Timoteuskirje 5:15: "Sillä muutamat ovat jo kääntyneet pois seuraamaan saatanaa."
+- Jesaja 64:4: "(3) Ei ole ikiajoista kuultu, ei ole korviin tullut, ei ole silmä nähnyt muuta Jumalaa, paitsi sinut, joka senkaltaisia tekisi häntä odottavalle."
+- 2. Korinttilaiskirje 5:7: "sillä me vaellamme uskossa emmekä näkemisessä."
+- Jaakobin kirje 1:27: "Puhdas ja tahraton jumalanpalvelus Jumalan ja Isän silmissä on käydä katsomassa orpoja ja leskiä heidän ahdistuksessaan ja varjella itsensä niin, ettei maailma saastuta."
+- Matteus 16:4: "Tämä paha ja avionrikkoja sukupolvi tavoittelee merkkiä, mutta sille ei anneta muuta merkkiä kuin Joonaan merkki." Ja hän jätti heidät ja meni pois."
+- Valitusvirret 4:16: "Herran kasvot ovat hajottaneet heidät, hän ei heihin enää katso. Papeista ei välitetty, vanhimpia ei armahdettu."
+- Tiituskirje 3:9: "Mutta vältä mielettömiä riitakysymyksiä ja sukuluetteloita ja kinastelua ja kiistoja laista, sillä ne ovat hyödyttömiä ja turhia."
+- 1. Timoteuskirje 1:5: "Mutta käskyn päämäärä on rakkaus, joka tulee puhtaasta sydämestä ja hyvästä omastatunnosta ja vilpittömästä uskosta."
+- Luukas 17:22: "Ja hän sanoi opetuslapsillensa: "Tulee aika, jolloin te halajaisitte nähdä edes yhtä Ihmisen Pojan päivää, mutta ette saa nähdä."
+
+--- 4.3 Osio 4.3 ---
+
+- Jaakobin kirje 1:4: "Ja kärsivällisyys tuottakoon täydellisen teon, että te olisitte täydelliset ja eheät ettekä missään puuttuvaiset."
+- Markus 10:17: "Ja hänen sieltä tielle mennessään juoksi muuan hänen luoksensa, polvistui hänen eteensä ja kysyi häneltä: "Hyvä opettaja, mitä minun pitää tekemän, että minä iankaikkisen elämän perisin?""
+- Apostolien teot 20:31: "Valvokaa sentähden ja muistakaa, että minä olen kolme vuotta lakkaamatta yötä ja päivää kyynelin neuvonut teitä itsekutakin."
+- Apostolien teot 20:32: "Ja nyt minä uskon teidät Jumalan ja hänen armonsa sanan haltuun, hänen, joka on voimallinen rakentamaan teitä ja antamaan teille perintöosan kaikkien pyhitettyjen joukossa."
+- Jaakobin kirje 5:7: "Niin olkaa kärsivällisiä, veljet, Herran tulemukseen asti. Katso, peltomies odottaa maan kallista hedelmää, kärsivällisesti sitä vartoen, kunnes saa syksyisen sateen ja keväisen."
+- Markus 10:16: "Ja hän otti heitä syliinsä, pani kätensä heidän päällensä ja siunasi heitä."
+- Apostolien teot 21:15: "Niiden päivien kuluttua me hankkiuduimme ja menimme ylös Jerusalemiin."
+- Luukas 1:17: "Ja hän käy hänen edellään Eliaan hengessä ja voimassa, kääntääksensä isien sydämet lasten puoleen ja tottelemattomat vanhurskasten mielenlaatuun, näin Herralle toimittaaksensa valmistetun kansan.""
+- Apostolien teot 14:28: "Ja he viipyivät pitkän aikaa opetuslasten tykönä."
+- Apostolien teot 18:26: "Hän rupesi rohkeasti puhumaan synagoogassa. Mutta kun Priskilla ja Akylas olivat häntä kuunnelleet, ottivat he hänet luokseen ja selvittivät hänelle tarkemmin Jumalan tien."
+- 1. Pietarin kirje 1:2: "ja jotka Isän Jumalan edeltätietämisen mukaan ovat Hengen pyhittämisen kautta valitut Jeesuksen Kristuksen kuuliaisuuteen ja hänen verellänsä vihmottaviksi. Lisääntyköön teille armo ja rauha."
+- Heprealaiskirje 11:22: "Uskon kautta muistutti Joosef loppunsa lähetessä Israelin lasten lähdöstä ja antoi määräyksen luistansa."
+- Apostolien teot 18:27: "Ja kun hän tahtoi mennä Akaiaan, niin veljet kehoittivat häntä siihen ja kirjoittivat opetuslapsille, että nämä ottaisivat hänet vastaan. Ja sinne saavuttuaan hän armon kautta oli suureksi hyödyksi uskoon tulleille."
+- Jeremia 31:21: "Pystytä itsellesi kivimerkkejä, aseta itsellesi tienviittoja, paina mieleesi tie, polku, jota olet kulkenut. Palaja, neitsyt Israel, palaja näihin kaupunkeihisi."
+- Jeremia 31:22: "Kuinka kauan sinä mutkistelet sinne ja tänne, sinä luopiotytär? Sillä Herra luo maahan uutta: nainen miestä piirittää."
+
+--- 4.4 Osio 4.4 ---
+
+- Efesolaiskirje 5:10: "ja tutkikaa, mikä on otollista Herralle;"
+- 1. Korinttilaiskirje 5:13: "Mutta ulkopuolella olevat tuomitsee Jumala. "Poistakaa keskuudestanne se, joka on paha.""
+- Saarnaaja 9:1: "Niin minä painoin mieleeni kaiken tämän ja pyrin saamaan kaikkea tätä selville, kuinka näet vanhurskaat ja viisaat ja heidän tekonsa ovat Jumalan kädessä. Ei rakkauskaan eikä viha ole ihmisen tiedettävissä; kaikkea voi hänellä olla edessä."
+- 1. Korinttilaiskirje 6:1: "Kuinka rohkenee kukaan teistä, jolla on riita-asia toisen kanssa, käydä oikeutta vääräin edessä? Miksei pyhien edessä?"
+- 1. Korinttilaiskirje 6:2: "Vai ettekö tiedä, että pyhät tulevat maailman tuomitsemaan? Ja jos te tuomitsette maailman, niin ettekö kelpaa ratkaisemaan aivan vähäpätöisiä asioita?"
+- Psalmit 11:4: "Herra pyhässä temppelissänsä, Herra, jonka istuin on taivaassa — hänen silmänsä näkevät, hänen katseensa tutkii ihmislapset;"
+- Heprealaiskirje 12:14: "Pyrkikää rauhaan kaikkien kanssa ja pyhitykseen, sillä ilman sitä ei kukaan ole näkevä Herraa;"
+- Roomalaiskirje 12:3: "Sillä sen armon kautta, mikä minulle on annettu, minä sanon teille jokaiselle, ettei tule ajatella itsestänsä enempää, kuin ajatella sopii, vaan ajatella kohtuullisesti, sen uskonmäärän mukaan, minkä Jumala on kullekin suonut."
+- Heprealaiskirje 10:25: "älkäämme jättäkö omaa seurakunnankokoustamme, niinkuin muutamien on tapana, vaan kehoittakaamme toisiamme, sitä enemmän, kuta enemmän näette tuon päivän lähestyvän."
+- 2. Korinttilaiskirje 13:6: "Minä toivon teidän tulevan tuntemaan, että me emme ole niitä, jotka eivät koetusta kestä."
+- Roomalaiskirje 3:4: "Pois se! Olkoon Jumala totinen, mutta jokainen ihminen valhettelija, niinkuin kirjoitettu on: "Että sinut havaittaisiin vanhurskaaksi sanoissasi ja että voittaisit, kun sinun kanssasi oikeutta käydään"."
+- Roomalaiskirje 14:22: "Pidä sinä itselläsi Jumalan edessä se usko, mikä sinulla on. Onnellinen on se, joka ei tuomitse itseään siitä, minkä hän oikeaksi havaitsee;"
+- Sananlaskut 21:3: "Vanhurskauden ja oikeuden harjoittaminen on Herralle otollisempi kuin uhri."
+- Psalmit 53:3: "Jumala katsoo taivaasta ihmislapsiin nähdäksensä, onko ketään ymmärtäväistä, ketään, joka etsii Jumalaa."
+- Efesolaiskirje 5:11: "älköönkä teillä olko mitään osallisuutta pimeyden hedelmättömiin tekoihin, vaan päinvastoin nuhdelkaakin niistä."
+
+--- 5 Osio 5 ---
+
+- 1. Pietarin kirje 5:9: "Vastustakaa häntä lujina uskossa, tietäen, että samat kärsimykset täytyy teidän veljiennekin maailmassa kestää."
+- Jesaja 30:17: "Tuhat pakenee yhden uhkaa; viiden uhkaa te pakenette, kunnes se, mikä teistä jää, on kuin merkkipuu vuoren huipulla, kuin lipputanko kukkulalla."
+- Jesaja 30:16: "vaan sanoitte: "Ei! Hevosilla me tahdomme kiitää" — niinpä saatte kiitää pakoon. "Nopean selässä me tahdomme ratsastaa" — niinpä ovat vainoojanne nopeat."
+- Heprealaiskirje 6:11: "Mutta me halajamme sitä, että kukin teistä osoittaa samaa intoa, säilyttääkseen toivon varmuuden loppuun asti,"
+- Heprealaiskirje 6:19: "Se toivo meille on ikäänkuin sielun ankkuri, varma ja luja, joka ulottuu esiripun sisäpuolelle asti,"
+- Psalmit 84:13: "Herra Sebaot, autuas se ihminen, joka sinuun turvaa!"
+- 2. Tessalonikalaiskirje 3:4: "Ja me luotamme teihin Herrassa, että te sekä nyt että vasta teette, mitä me käskemme."
+- Jaakobin kirje 1:4: "Ja kärsivällisyys tuottakoon täydellisen teon, että te olisitte täydelliset ja eheät ettekä missään puuttuvaiset."
+- 1. Pietarin kirje 5:1: "Vanhimpia teidän joukossanne minä siis kehoitan, minä, joka myös olen vanhin ja Kristuksen kärsimysten todistaja ja osallinen myös siihen kirkkauteen, joka vastedes on ilmestyvä:"
+- Jesaja 51:11: "Niin Herran vapahdetut palajavat ja tulevat Siioniin riemuiten, päänsä päällä iankaikkinen ilo. Riemu ja ilo saavuttavat heidät, mutta murhe ja huokaus pakenevat."
+- 1. Tessalonikalaiskirje 5:14: "Me kehoitamme teitä, veljet: nuhdelkaa kurittomia, rohkaiskaa alakuloisia, holhotkaa heikkoja, olkaa pitkämieliset kaikkia kohtaan."
+- Jesaja 30:15: "Sillä näin sanoo Herra, Herra, Israelin Pyhä: Kääntymällä ja pysymällä hiljaa te pelastutte, rauhallisuus ja luottamus on teidän väkevyytenne; mutta te ette tahtoneet,"
+- Jaakobin kirje 1:5: "Mutta jos joltakin teistä puuttuu viisautta, anokoon sitä Jumalalta, joka antaa kaikille alttiisti ja soimaamatta, niin se hänelle annetaan."
+- Jesaja 16:4: "Salli minun karkoitettujeni asua tykönäsi, ole Mooabille suojana hävittäjää vastaan. Sillä sortajalle tulee loppu, hävitys lakkaa, ja polkija on maasta poissa;"
+- 1. Timoteuskirje 3:12: "Seurakuntapalvelija olkoon yhden vaimon mies, lapsensa ja kotinsa hyvin hallitseva."
+
+Diagnostiikka valmis.

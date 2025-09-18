@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 VEKTORI_INDEKSI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
 VIITE_KARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
 RAAMATTU_TIEDOSTO = "bible.json"
-EMBEDDING_MALLI = "paraphrase-multilingual-MiniLM-L12-v2"
+EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 
 # --- Lokituksen alustus ---
 logging.basicConfig(

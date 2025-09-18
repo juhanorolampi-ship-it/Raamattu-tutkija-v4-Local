@@ -1,4 +1,4 @@
-# luo_vektoritietokanta.py (Versio 2.2 - Finaali)
+# luo_vektoritietokanta.py (Versio 3.4 - Oikea JSON-rakenne)
 import json
 import logging
 import faiss
@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 RAAMATTU_TIEDOSTO = "bible.json"
 VEKTORI_INDEKSI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
 VIITE_KARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
-EMBEDDING_MALLI = "paraphrase-multilingual-MiniLM-L12-v2"
+EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -19,60 +19,78 @@ logging.basicConfig(
 
 def luo_vektoritietokanta():
     """
-    Lukee Raamatun, yhdistää jakeiden otsikot ja tekstit, luo niistä
-    vektoriupotukset ja tallentaa ne FAISS-indeksiin.
+    Lukee Raamatun, luo kontekstuaalisia 3 jakeen kokonaisuuksia,
+    luo niistä vektoriupotukset ja tallentaa ne FAISS-indeksiin.
     """
-    logging.info("Aloitetaan vektoritietokannan (v2.2) luonti...")
-    
+    logging.info("Aloitetaan vektoritietokannan (v3.4 - Oikea JSON-rakenne) luonti...")
+
     try:
         with open(RAAMATTU_TIEDOSTO, "r", encoding="utf-8") as f:
             raamattu_data = json.load(f)
     except Exception as e:
-        logging.error(f"KRIITTINEN VIRHE: '{RAAMATTU_TIEDOSTO}' lataus epäonnistui: {e}")
+        logging.error(f"Raamatun datatiedostoa '{RAAMATTU_TIEDOSTO}' ei voitu lukea: {e}")
         return
 
-    logging.info(f"Ladataan embedding-malli: '{EMBEDDING_MALLI}'...")
-    try:
-        model = SentenceTransformer(EMBEDDING_MALLI)
-    except Exception as e:
-        logging.error(f"Mallin lataus epäonnistui: {e}")
+    model = SentenceTransformer(EMBEDDING_MALLI)
+    
+    # --- TÄYSIN UUSITTU JÄSENNYSLOGIIKKA, JOKA VASTAA bible.json RAKENNETTA ---
+    kaikki_jakeet = []
+    logging.info("Jäsennellään Raamattua ja kerätään kaikki jakeet...")
+    
+    if "book" not in raamattu_data or not isinstance(raamattu_data["book"], dict):
+        logging.error(f"Tiedostosta '{RAAMATTU_TIEDOSTO}' ei löytynyt 'book'-objektia.")
         return
 
-    logging.info("Yhdistetään jakeiden otsikoita ja tekstejä...")
-    jakeiden_kokotekstit = []
-    jakeiden_viitteet = []
+    # Käydään läpi kirja-objektin arvot (1, 2, 3...)
+    for book_obj in raamattu_data["book"].values():
+        kirjan_nimi = book_obj.get("info", {}).get("name")
+        luvut_obj = book_obj.get("chapter")
 
-    # Oikea tapa käydä bible.json läpi (kirjat ovat sanakirja)
-    for kirja_dict in raamattu_data.get('book', {}).values():
-        if not isinstance(kirja_dict, dict):
+        if not kirjan_nimi or not isinstance(luvut_obj, dict):
             continue
-        kirjan_nimi = kirja_dict.get('info', {}).get('name')
-        if not kirjan_nimi:
-            continue
-        
-        for luku_nro, luku_dict in kirja_dict.get('chapter', {}).items():
-            if not isinstance(luku_dict, dict):
+
+        # Käydään läpi luku-objektin arvot (1, 2, 3...)
+        for luku_nro, luku_obj in luvut_obj.items():
+            jakeet_obj = luku_obj.get("verse")
+            
+            if not isinstance(jakeet_obj, dict):
                 continue
-            for jae_nro_str, jae_dict in luku_dict.get('verse', {}).items():
-                if isinstance(jae_dict, dict):
-                    otsikko = jae_dict.get("title", "")
-                    teksti = jae_dict.get("text", "")
-                    
-                    # TÄRKEÄ PARANNUS: Piste lisätään vain, jos otsikko on olemassa (sinun ideasi!)
-                    if otsikko:
-                        koko_teksti = f"{otsikko}. {teksti}".strip()
-                    else:
-                        koko_teksti = teksti.strip()
-                    
-                    if koko_teksti:
-                        viite = f"{kirjan_nimi} {luku_nro}:{jae_nro_str}"
-                        jakeiden_kokotekstit.append(koko_teksti)
-                        jakeiden_viitteet.append(viite)
+            
+            # Käydään läpi jae-objektin arvot (1, 2, 3...)
+            for jae_nro, jae_obj in jakeet_obj.items():
+                teksti = jae_obj.get("text", "").strip()
+                if teksti:
+                    viite = f"{kirjan_nimi} {luku_nro}:{jae_nro}"
+                    kaikki_jakeet.append({"viite": viite, "teksti": teksti})
 
-    logging.info(f"Kerätty {len(jakeiden_kokotekstit)} jaetta. Muunnetaan vektoreiksi...")
+    logging.info(f"Jäsennys valmis. Löydettiin yhteensä {len(kaikki_jakeet)} jaetta.")
+
+    if not kaikki_jakeet:
+        logging.error("Jakeiden kerääminen epäonnistui. Vektorikantaa ei luoda.")
+        return
+        
+    konteksti_tekstit = []
+    konteksti_viitteet = []
+    logging.info("Luodaan kontekstuaalisia jakeiden kokonaisuuksia (3 jakeen ikkuna)...")
+
+    for i, jae in enumerate(kaikki_jakeet):
+        edellinen_teksti = kaikki_jakeet[i-1]["teksti"] if i > 0 else ""
+        nykyinen_teksti = jae["teksti"]
+        seuraava_teksti = kaikki_jakeet[i+1]["teksti"] if i < len(kaikki_jakeet) - 1 else ""
+        
+        koko_teksti = f"{edellinen_teksti} {nykyinen_teksti} {seuraava_teksti}".strip()
+        
+        konteksti_tekstit.append(koko_teksti)
+        konteksti_viitteet.append(jae["viite"])
+
+    logging.info(f"Kerätty {len(konteksti_tekstit)} kontekstuaalista kokonaisuutta. Muunnetaan vektoreiksi...")
     
-    vektorit = model.encode(jakeiden_kokotekstit, show_progress_bar=True)
+    vektorit = model.encode(konteksti_tekstit, show_progress_bar=True)
     
+    if vektorit.ndim < 2 or vektorit.shape[0] == 0:
+        logging.error("Vektorien luonti epäonnistui. Indeksiä ei luoda.")
+        return
+
     vektorin_ulottuvuus = vektorit.shape[1]
     indeksi = faiss.IndexFlatL2(vektorin_ulottuvuus)
     indeksi.add(np.array(vektorit, dtype=np.float32))
@@ -80,11 +98,12 @@ def luo_vektoritietokanta():
     faiss.write_index(indeksi, VEKTORI_INDEKSI_TIEDOSTO)
     logging.info(f"Uusi indeksi tallennettu: '{VEKTORI_INDEKSI_TIEDOSTO}'")
 
-    viite_kartta = {str(i): viite for i, viite in enumerate(jakeiden_viitteet)}
+    viite_kartta = {str(i): viite for i, viite in enumerate(konteksti_viitteet)}
     with open(VIITE_KARTTA_TIEDOSTO, "w", encoding="utf-8") as f:
         json.dump(viite_kartta, f, ensure_ascii=False, indent=4)
     logging.info(f"Uusi viitekartta tallennettu: '{VIITE_KARTTA_TIEDOSTO}'")
-    logging.info("Vektoritietokanta päivitetty onnistuneesti versioon 2.2!")
+    
+    logging.info("Vektorikannan luonti onnistui!")
 
 if __name__ == "__main__":
     luo_vektoritietokanta()
