@@ -1,14 +1,15 @@
-# run_full_diagnostics.py (Versio 4.5 - Vankka jäsennys uudelle syötteelle)
+# run_full_diagnostics.py (Versio 5.1 - Yksityiskohtainen ajastus)
 import logging
 import time
 import re
 from collections import defaultdict
 
-from logic import etsi_merkityksen_mukaan
+# Varmistetaan, että logic.py-tiedostosta tuodaan oikea funktio
+from logic import etsi_merkityksen_mukaan, lataa_resurssit
 
 # --- MÄÄRITYKSET ---
-SYOTE_TIEDOSTO = 'Osa 7 Kutsumusten Synergia.txt'
-TULOS_LOKI = 'diagnostiikka_raportti_v4_Kutsumusten_Synergia.txt'
+SYOTE_TIEDOSTO = 'syote.txt'
+TULOS_LOKI = 'diagnostiikka_raportti_uusi_testi.txt'
 HAKUTULOSTEN_MAARA_PER_TEEMA = 15
 
 # --- LOKITUSMÄÄRITYKSET ---
@@ -28,59 +29,62 @@ stream_handler.setFormatter(logging.Formatter(
 ))
 logger.addHandler(stream_handler)
 
-# --- APUFUNKTIOT ---
+
 def log_header(text):
+    """Tulostaa siistin otsikon lokitiedostoon."""
     line = "=" * 80
-    logger.info("\n" + line)
-    logger.info(text.center(80))
-    logger.info(line + "\n")
+    logger.info("\n%s\n%s\n%s\n", line, text.center(80), line)
+
 
 def lue_syote_tiedosto(tiedostopolku):
-    """
-    Lukee ja jäsentää syötetiedoston. Tämä versio on suunniteltu
-    olemaan vankempi erilaisille tiedostorakenteille.
-    """
+    """Lukee ja jäsentää syötetiedoston vankasti."""
     try:
         with open(tiedostopolku, 'r', encoding='utf-8') as f:
             sisalto = f.read()
     except FileNotFoundError:
         logging.error(f"Syötetiedostoa '{tiedostopolku}' ei löytynyt.")
         return None, None
-    
+
     sisallysluettelo_match = re.search(
         r"Sisällysluettelo:(.*?)(?=\n\d\.|\Z)", sisalto, re.DOTALL
     )
     sisallysluettelo = sisallysluettelo_match.group(1).strip() if sisallysluettelo_match else ""
-    
+
     hakulauseet = {}
-    
-    # Jaetaan tiedosto osiin numeroidun otsikon perusteella.
-    # Tämä on paljon luotettavampi tapa kuin rivinvaihtojen etsiminen.
     osiot = re.split(r'\n(?=\d\.\s)', sisalto)
 
     for osio_teksti in osiot:
         osio_teksti = osio_teksti.strip()
         if not osio_teksti:
             continue
-        
-        # Erotetaan otsikko ja kuvaus
-        rivit = osio_teksti.split('\\n', 1)
+
+        rivit = osio_teksti.split('\n', 1)
         otsikko = rivit[0].strip()
         kuvaus = rivit[1].strip() if len(rivit) > 1 else ""
-        
+
         osio_match = re.match(r"^([\d\.]+)", otsikko)
         if osio_match:
             osio_nro = osio_match.group(1).strip('.')
-            # Yhdistetään otsikko ja kuvaus tehokkaaksi hakulauseeksi
-            haku = f"{otsikko}: {kuvaus.replace('\\n', ' ')}"
+            haku = f"{otsikko}: {kuvaus.replace('\n', ' ')}"
             hakulauseet[osio_nro] = haku
-            
+
     return hakulauseet, sisallysluettelo
 
+
 def suorita_diagnostiikka():
-    """Ajaa koko diagnostiikkaprosessin."""
+    """Ajaa koko diagnostiikkaprosessin yksityiskohtaisella ajastuksella."""
     total_start_time = time.time()
-    log_header("RAAMATTU-TUTKIJA v4 - DIAGNOSTIIKKA (Kutsumusten Synergia)")
+    log_header("RAAMATTU-TUTKIJA v4 - DIAGNOSTIIKKA (Yksityiskohtainen ajastus)")
+
+    # Ladataan resurssit kerran alussa, jotta sen kesto ei sotke hakuaikoja
+    logging.info("Esiladataan kaikki resurssit...")
+    resurssien_lataus_alku = time.time()
+    lataa_resurssit()
+    resurssien_lataus_loppu = time.time()
+    logging.info(
+        "Resurssit ladattu. Kesto: "
+        f"{(resurssien_lataus_loppu - resurssien_lataus_alku):.2f} sekuntia."
+    )
 
     hakulauseet, sisallysluettelo = lue_syote_tiedosto(SYOTE_TIEDOSTO)
     if not hakulauseet:
@@ -88,44 +92,49 @@ def suorita_diagnostiikka():
         return
 
     logging.info(f"Löytyi {len(hakulauseet)} osiota käsiteltäväksi tiedostosta '{SYOTE_TIEDOSTO}'.")
-    
+
     jae_kartta = defaultdict(list)
     kaikki_loydetyt_jakeet = set()
-    
+    total_search_time = 0
+
     sorted_osiot = sorted(
-        hakulauseet.items(), 
+        hakulauseet.items(),
         key=lambda item: [int(p) for p in item[0].split('.')]
     )
 
     for i, (osio_nro, haku) in enumerate(sorted_osiot):
         logging.info(f"--- Käsittelyssä osio {i+1}/{len(sorted_osiot)}: {osio_nro} ---")
-        logging.info(f"Hakuaihe: '{haku}'")
         
-        start_time = time.time()
-        tulokset = etsi_merkityksen_mukaan(haku, top_k=HAKUTULOSTEN_MAARA_PER_TEEMA)
-        end_time = time.time()
+        # Ajastetaan koko hakuprosessi
+        haku_alku = time.time()
+        tulokset = etsi_merkityksen_mukaan(
+            haku, top_k=HAKUTULOSTEN_MAARA_PER_TEEMA
+        )
+        haku_loppu = time.time()
+        
+        kesto = haku_loppu - haku_alku
+        total_search_time += kesto
 
-        logging.info(f"Haku valmis. Kesto: {(end_time - start_time):.4f} sekuntia. Löydettiin {len(tulokset)} jaetta.")
+        logging.info(f"Haku valmis. Kokonaiskesto: {kesto:.4f} sekuntia. Löydettiin {len(tulokset)} jaetta.")
 
         if tulokset:
             for tulos in tulokset:
                 jae_viite_teksti = f"- {tulos['viite']}: \"{tulos['teksti']}\""
                 jae_kartta[osio_nro].append(jae_viite_teksti)
                 kaikki_loydetyt_jakeet.add(jae_viite_teksti)
-        else:
-            logging.warning("Ei hakutuloksia tälle teemalle.")
         logging.info("-" * 40)
 
     total_end_time = time.time()
     log_header("DIAGNOSTIIKAN YHTEENVETO")
-    logging.info(f"Kokonaiskesto: {(total_end_time - total_start_time):.2f} sekuntia.")
+    logging.info(f"Koko diagnostiikan ajo kesti: {(total_end_time - total_start_time):.2f} sekuntia.")
+    logging.info(f"Hakujen kokonaisaika (ilman resurssien latausta): {total_search_time:.2f} sekuntia.")
     logging.info(f"Löydetty yhteensä {len(kaikki_loydetyt_jakeet)} uniikkia jaetta.")
-    
+
     log_header("YKSITYISKOHTAINEN JAEJAOTTELU")
-    
+
     for osio_nro, _ in sorted_osiot:
+        # ... (tämä osa pysyy samana, joten jätän sen pois selkeyden vuoksi)
         otsikko = ""
-        # Etsitään otsikko sisällysluettelosta
         if sisallysluettelo:
              otsikko_match = re.search(
                 r"^{}\\.?\\s*(.*)".format(re.escape(osio_nro)),
@@ -134,14 +143,13 @@ def suorita_diagnostiikka():
             )
              if otsikko_match:
                 otsikko = otsikko_match.group(1).strip()
-        
-        # Jos ei löydy, otetaan se hakulauseesta
+
         if not otsikko:
             haku = hakulauseet.get(osio_nro, "")
             otsikko = haku.split(':', 1)[0]
 
         logger.info(f"\n--- {osio_nro} {otsikko} ---\n")
-        
+
         if osio_nro in jae_kartta:
             for jae in jae_kartta[osio_nro]:
                 logger.info(jae)
@@ -149,6 +157,7 @@ def suorita_diagnostiikka():
             logger.info("Ei jakeita tähän osioon.")
 
     logging.info("\nDiagnostiikka valmis.")
+
 
 if __name__ == '__main__':
     suorita_diagnostiikka()
