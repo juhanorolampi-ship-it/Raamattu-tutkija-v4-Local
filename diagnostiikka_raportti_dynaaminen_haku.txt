@@ -1,0 +1,187 @@
+
+================================================================================
+             RAAMATTU-TUTKIJA v4 - DIAGNOSTIIKKA (Dynaaminen haku)              
+================================================================================
+
+Esiladataan kaikki resurssit...
+Ladataan hakumallit, indeksit ja datatiedostot muistiin...
+Use pytorch device_name: cpu
+Load pretrained SentenceTransformer: TurkuNLP/sbert-cased-finnish-paraphrase
+Use pytorch device: cpu
+Kaikki resurssit ladattu onnistuneesti.
+Resurssit ladattu. Kesto: 7.01 sekuntia.
+Löytyi 5 osiota käsiteltäväksi tiedostosta 'syote.txt'.
+
+================================================================================
+Käsitellään osio 1/5: 1 - "1. Johdanto: Yksi Ruumis, Monta Toimintoa: Kertaus..."
+================================================================================
+
+Vaihe 1: Etsitään paras siemenjae...
+-> Valittu siemenjae: Miika 6:8 - "Hän on ilmoittanut sinulle, ihminen, mikä hyvä on; ja mitä muuta Herra sinulta vaatii, kuin että teet sitä, mikä oikein on, rakastat laupeutta ja vaellat nöyrästi Jumalasi edessä?"
+-> Kesto: 0.1256 sekuntia.
+Vaihe 2: Rakennetaan rikastettu hakukysely...
+Siemenjae 'Miika 6:8' yhdistetty alkuperäiseen kyselyyn.
+-> Rakennettu kysely: "Etsi Raamatusta jakeita, jotka liittyvät tähän aiheeseen: '1. Johdanto: Yksi Ruumis, Monta Toimintoa: Kertaus: Olemme osa yhtä ruumista. Mutta miten t..."
+Vaihe 3: Suoritetaan haku pääindeksiin (top_k=15)...
+-> Päähaun ja uudelleenjärjestyksen kesto: 3.8500 sekuntia.
+-> Löydettiin 15 jaetta.
+
+================================================================================
+Käsitellään osio 2/5: 2 - "2. Profeetan ja Papin Sydän: Kahden Kutsumuksen Dy..."
+================================================================================
+
+Vaihe 1: Etsitään paras siemenjae...
+-> Valittu siemenjae: Miika 6:8 - "Hän on ilmoittanut sinulle, ihminen, mikä hyvä on; ja mitä muuta Herra sinulta vaatii, kuin että teet sitä, mikä oikein on, rakastat laupeutta ja vaellat nöyrästi Jumalasi edessä?"
+-> Kesto: 0.0786 sekuntia.
+Vaihe 2: Rakennetaan rikastettu hakukysely...
+Siemenjae 'Miika 6:8' yhdistetty alkuperäiseen kyselyyn.
+-> Rakennettu kysely: "Etsi Raamatusta jakeita, jotka liittyvät tähän aiheeseen: '2. Profeetan ja Papin Sydän: Kahden Kutsumuksen Dynamiikka: Profeetallinen kutsumus: Näkee ..."
+Vaihe 3: Suoritetaan haku pääindeksiin (top_k=15)...
+-> Päähaun ja uudelleenjärjestyksen kesto: 4.8053 sekuntia.
+-> Löydettiin 15 jaetta.
+
+================================================================================
+Käsitellään osio 3/5: 3 - "3. Martan ja Marian Palvelutyöt: Tekeminen ja Olem..."
+================================================================================
+
+Vaihe 1: Etsitään paras siemenjae...
+-> Valittu siemenjae: Miika 6:8 - "Hän on ilmoittanut sinulle, ihminen, mikä hyvä on; ja mitä muuta Herra sinulta vaatii, kuin että teet sitä, mikä oikein on, rakastat laupeutta ja vaellat nöyrästi Jumalasi edessä?"
+-> Kesto: 0.0545 sekuntia.
+Vaihe 2: Rakennetaan rikastettu hakukysely...
+Siemenjae 'Miika 6:8' yhdistetty alkuperäiseen kyselyyn.
+-> Rakennettu kysely: "Etsi Raamatusta jakeita, jotka liittyvät tähän aiheeseen: '3. Martan ja Marian Palvelutyöt: Tekeminen ja Oleminen Tasapainossa: Martan kutsumus: Käytä..."
+Vaihe 3: Suoritetaan haku pääindeksiin (top_k=15)...
+-> Päähaun ja uudelleenjärjestyksen kesto: 4.3508 sekuntia.
+-> Löydettiin 15 jaetta.
+
+================================================================================
+Käsitellään osio 4/5: 4 - "4. Terve Jännite Rakentaa, Huono Jännite Hajottaa:..."
+================================================================================
+
+Vaihe 1: Etsitään paras siemenjae...
+-> Valittu siemenjae: Miika 6:8 - "Hän on ilmoittanut sinulle, ihminen, mikä hyvä on; ja mitä muuta Herra sinulta vaatii, kuin että teet sitä, mikä oikein on, rakastat laupeutta ja vaellat nöyrästi Jumalasi edessä?"
+-> Kesto: 0.0517 sekuntia.
+Vaihe 2: Rakennetaan rikastettu hakukysely...
+Siemenjae 'Miika 6:8' yhdistetty alkuperäiseen kyselyyn.
+-> Rakennettu kysely: "Etsi Raamatusta jakeita, jotka liittyvät tähän aiheeseen: '4. Terve Jännite Rakentaa, Huono Jännite Hajottaa: Opetus siitä, että erilaisista lahjoista..."
+Vaihe 3: Suoritetaan haku pääindeksiin (top_k=15)...
+-> Päähaun ja uudelleenjärjestyksen kesto: 3.9689 sekuntia.
+-> Löydettiin 15 jaetta.
+
+================================================================================
+Käsitellään osio 5/5: 5 - "5. Yhteenveto: Etsi Se, Joka Täydentää Sinua: Haas..."
+================================================================================
+
+Vaihe 1: Etsitään paras siemenjae...
+-> Valittu siemenjae: Miika 6:8 - "Hän on ilmoittanut sinulle, ihminen, mikä hyvä on; ja mitä muuta Herra sinulta vaatii, kuin että teet sitä, mikä oikein on, rakastat laupeutta ja vaellat nöyrästi Jumalasi edessä?"
+-> Kesto: 0.0685 sekuntia.
+Vaihe 2: Rakennetaan rikastettu hakukysely...
+Siemenjae 'Miika 6:8' yhdistetty alkuperäiseen kyselyyn.
+-> Rakennettu kysely: "Etsi Raamatusta jakeita, jotka liittyvät tähän aiheeseen: '5. Yhteenveto: Etsi Se, Joka Täydentää Sinua: Haaste: Kenen kutsumus sinun seurakunnassasi ..."
+Vaihe 3: Suoritetaan haku pääindeksiin (top_k=15)...
+-> Päähaun ja uudelleenjärjestyksen kesto: 3.8019 sekuntia.
+-> Löydettiin 15 jaetta.
+
+================================================================================
+                            DIAGNOSTIIKAN YHTEENVETO                            
+================================================================================
+
+Koko diagnostiikan ajo kesti: 28.17 sekuntia.
+Hakujen kokonaisaika (ilman resurssien latausta): 21.16 sekuntia.
+
+================================================================================
+                         YKSITYISKOHTAINEN JAEJAOTTELU                          
+================================================================================
+
+
+--- 1 1. Johdanto ---
+
+- 2. Kuningasten kirja 10:6: "Silloin hän kirjoitti heille toisen kirjeen, näin kuuluvan: "Jos te olette minun puolellani ja kuulette minua, niin ottakaa herranne poikien päät ja tulkaa huomenna tähän aikaan minun luokseni Jisreeliin". Ne seitsemänkymmentä kuninkaan poikaa asuivat näet kaupungin ylimysten luona, jotka heitä kasvattivat."
+- 2. Samuelin kirja 13:5: "Joonadab sanoi hänelle: "Paneudu vuoteeseesi ja tekeydy sairaaksi. Ja kun isäsi tulee katsomaan sinua, niin sano hänelle: 'Salli minun sisareni Taamarin tulla antamaan minulle jotakin syötävää; jos hän valmistaisi ruuan minun silmieni edessä, että minä näkisin sen, niin minä söisin hänen kädestään'.""
+- 2. Mooseksen kirja 33:16: "Sillä mistä muutoin tiedetään, että minä olen saanut armon sinun silmiesi edessä, minä ja sinun kansasi, ellei siitä, että sinä käyt meidän kanssamme, niin että me, minä ja sinun kansasi, olemme erikoiset kaikkien kansojen joukossa, jotka maan päällä ovat?""
+- 1. Samuelin kirja 21:2: "(3) Daavid vastasi pappi Ahimelekille: "Kuningas on käskenyt minut asialle ja sanoi minulle: 'Älköön kukaan saako tietää mitään siitä asiasta, jolle minä sinut lähetän, ja siitä käskystä, jonka minä olen sinulle antanut'. Ja palvelijat minä olen määrännyt siihen ja siihen paikkaan."
+- 2. Mooseksen kirja 22:9: "(8) Jokaisessa anastusasiassa, koskipa se härkää tai aasia tai lammasta tai vaatetta tai mitä tahansa kadonnutta, josta joku sanoo: 'Tämä se on', tulkoon kummankin asia Jumalan eteen; ja se, jonka Jumala tuomitsee syylliseksi, korvatkoon toiselle kaksinkertaisesti."
+- Tuomarien kirja 6:13: "Niin Gideon vastasi hänelle: "Oi, Herrani, jos Herra on meidän kanssamme, miksi sitten kaikki tämä on meitä kohdannut? Ja missä ovat kaikki hänen ihmeelliset tekonsa, joista isämme ovat meille kertoneet sanoen: 'Herra on johdattanut meidät tänne Egyptistä'? Mutta nyt Herra on hyljännyt meidät ja antanut meidät Midianin kouriin.""
+- Ilmestyskirja 19:10: "Ja minä lankesin hänen jalkojensa juureen, kumartaen rukoillakseni häntä. Mutta hän sanoi minulle: "Varo, ettet sitä tee; minä olen sinun ja sinun veljiesi kanssapalvelija, niiden, joilla on Jeesuksen todistus; kumarra ja rukoile Jumalaa. Sillä Jeesuksen todistus on profetian henki.""
+- 2. Kuningasten kirja 5:15: "Sitten hän palasi Jumalan miehen luo, hän ja koko hänen joukkonsa, meni sisälle, astui hänen eteensä ja sanoi: "Katso, nyt minä tiedän, ettei Jumalaa ole missään muualla maan päällä kuin Israelissa. Ota siis vastaan jäähyväislahja palvelijaltasi.""
+- Kolossalaiskirje 4:13: "Sillä minä annan hänestä sen todistuksen, että hän näkee paljon vaivaa teidän hyväksenne ja niiden hyväksi, jotka ovat Laodikeassa, sekä niiden, jotka ovat Hierapolissa."
+- Matteus 9:13: "Mutta menkää ja oppikaa, mitä tämä on: 'Laupeutta minä tahdon enkä uhria'. Sillä en minä ole tullut kutsumaan vanhurskaita, vaan syntisiä.""
+- Apostolien teot 14:15: "ja sanoivat: "Miehet, miksi te näin teette? Mekin olemme ihmisiä, yhtä vajavaisia kuin te, ja julistamme teille evankeliumia, että te kääntyisitte noista turhista jumalista elävän Jumalan puoleen, joka on tehnyt taivaan ja maan ja meren ja kaikki, mitä niissä on."
+- Tuomarien kirja 15:11: "Niin kolmetuhatta miestä Juudasta meni Eetamin kallioluolalle, ja he sanoivat Simsonille: "Etkö tiedä, että filistealaiset hallitsevat meitä; mitä oletkaan meille tehnyt!" Hän vastasi heille: "Niinkuin he tekivät minulle, niin minäkin tein heille"."
+- Johannes 8:42: "Jeesus sanoi heille: "Jos Jumala olisi teidän Isänne, niin te rakastaisitte minua, sillä minä olen Jumalasta lähtenyt ja tullut; en minä ole itsestäni tullut, vaan hän on minut lähettänyt."
+- Roomalaiskirje 8:28: "Mutta me tiedämme, että kaikki yhdessä vaikuttaa niiden parhaaksi, jotka Jumalaa rakastavat, niiden, jotka hänen aivoituksensa mukaan ovat kutsutut."
+- Luukas 10:40: "Mutta Martta puuhasi monissa palvelustoimissa; ja hän tuli ja sanoi: "Herra, etkö sinä välitä mitään siitä, että sisareni on jättänyt minut yksinäni palvelemaan? Sano siis hänelle, että hän minua auttaisi.""
+
+--- 2 2. Profeetan ja Papin Sydän ---
+
+- Jesaja 58:2: "Minua he muka etsivät joka päivä ja haluavat tietoa minun teistäni niinkuin kansa, joka tekee vanhurskautta eikä hylkää Jumalansa oikeutta. He vaativat minulta vanhurskaita tuomioita, haluavat, että Jumala heitä lähestyisi:"
+- Apostolien teot 5:39: "mutta jos se on Jumalasta, niin te ette voi heitä kukistaa. Varokaa, ettei teitä ehkä havaittaisi sotiviksi itse Jumalaa vastaan.""
+- Roomalaiskirje 16:17: "Mutta minä kehoitan teitä, veljet, pitämään silmällä niitä, jotka saavat aikaan erimielisyyttä ja pahennusta vastoin sitä oppia, jonka te olette saaneet; vetäytykää pois heistä."
+- Jeremia 14:18: "Jos minä kedolle lähden, katso — miekan kaatamia! Jos tulen kaupunkiin, katso — kalvava nälkä! Sillä sekä profeetat että papit kiertävät maata eivätkä mitään tiedä."
+- 2. Timoteuskirje 3:6: "Sillä niitä ovat ne, jotka tungettelevat taloihin ja pauloihinsa kietovat syntien rasittamia ja monenlaisten himojen heiteltäviä naisparkoja,"
+- 2. Korinttilaiskirje 5:10: "Sillä kaikkien meidän pitää ilmestymän Kristuksen tuomioistuimen eteen, että kukin saisi sen mukaan, kuin hän ruumiissa ollessaan on tehnyt, joko hyvää tai pahaa."
+- Ilmestyskirja 2:16: "Tee siis parannus; mutta jos et, niin minä tulen sinun tykösi pian ja sodin heitä vastaan suuni miekalla."
+- Jeremia 23:17: "He hokevat minun halveksijoilleni: 'Herra on sen sanonut: Teillä on oleva rauha!' Ja kaikille, jotka vaeltavat sydämensä paatumuksessa, he sanovat: 'Ei teitä kohtaa onnettomuus'."
+- Miika 7:4: "Paras heistä on kuin orjantappura, oikeamielisin pahempi kuin teräväokainen aita. Sinun tähystäjäisi ilmoittama päivä, kosto sinulle, tulee. Silloin he joutuvat sekasortoon."
+- Tuomarien kirja 18:5: "Ja he sanoivat hänelle: "Kysy Jumalalta, että saisimme tietää, onnistuuko matka, jolla me olemme"."
+- Roomalaiskirje 1:10: "aina rukouksissani anoen, että minä jo vihdoinkin, jos Jumala tahtoo, pääsisin tulemaan teidän tykönne."
+- 1. Pietarin kirje 5:1: "Vanhimpia teidän joukossanne minä siis kehoitan, minä, joka myös olen vanhin ja Kristuksen kärsimysten todistaja ja osallinen myös siihen kirkkauteen, joka vastedes on ilmestyvä:"
+- 1. Pietarin kirje 5:3: "ei herroina halliten niitä, jotka ovat teidän osallenne tulleet, vaan ollen laumalle esikuvina,"
+- Luukas 18:7: "Eikö sitten Jumala toimittaisi oikeutta valituillensa, jotka häntä yötä päivää avuksi huutavat, ja viivyttäisikö hän heiltä apuansa?"
+- Heprealaiskirje 13:17: "Olkaa kuuliaiset johtajillenne ja tottelevaiset, sillä he valvovat teidän sielujanne niinkuin ne, joiden on tehtävä tili, että he voisivat tehdä sitä ilolla eikä huokaillen; sillä se ei ole teille hyödyllistä."
+
+--- 3 3. Martan ja Marian Palvelutyöt ---
+
+- 1. Timoteuskirje 6:2: "Mutta ne, joilla on uskovaiset isännät, älkööt pitäkö heitä vähemmässä arvossa sentähden, että he ovat veljiä, vaan palvelkoot heitä sitä mieluummin, koska he ovat uskovia ja rakastettuja ja harrastavat hyväntekemistä. Tätä opeta ja tähän kehoita."
+- Ilmestyskirja 2:2: "Minä tiedän sinun tekosi ja vaivannäkösi ja kärsivällisyytesi, ja ettet voi pahoja sietää; sinä olet koetellut niitä, jotka sanovat itseänsä apostoleiksi, eivätkä ole, ja olet havainnut heidät valhettelijoiksi;"
+- 1. Samuelin kirja 21:2: "(3) Daavid vastasi pappi Ahimelekille: "Kuningas on käskenyt minut asialle ja sanoi minulle: 'Älköön kukaan saako tietää mitään siitä asiasta, jolle minä sinut lähetän, ja siitä käskystä, jonka minä olen sinulle antanut'. Ja palvelijat minä olen määrännyt siihen ja siihen paikkaan."
+- 2. Korinttilaiskirje 11:12: "Mutta mitä minä teen, sen olen vastakin tekevä, riistääkseni aiheen niiltä, jotka aihetta etsivät, että heidät siinä, missä kerskaavat, havaittaisiin samankaltaisiksi kuin mekin."
+- 2. Timoteuskirje 2:15: "Pyri osoittautumaan Jumalalle semmoiseksi, joka koetukset kestää, työntekijäksi, joka ei työtään häpeä, joka oikein jakelee totuuden sanaa."
+- 1. Pietarin kirje 4:11: "Jos joku puhuu, puhukoon niinkuin Jumalan sanoja; jos joku palvelee, palvelkoon sen voiman mukaan, minkä Jumala antaa, että Jumala tulisi kaikessa kirkastetuksi Jeesuksen Kristuksen kautta. Hänen on kunnia ja valta aina ja iankaikkisesti. Amen."
+- Jeremia 13:10: "Tämä paha kansa, joka ei tahdo kuulla minun sanojani, joka vaeltaa sydämensä paatumuksessa, seuraa muita jumalia, palvelee ja kumartaa niitä, tulee tämän vyön kaltaiseksi, joka ei mihinkään kelpaa."
+- 2. Korinttilaiskirje 9:13: "kun he, tästä teidän palveluksestanne huomattuaan, kuinka taattu teidän mielenne on, ylistävät Jumalaa siitä, että te näin alistuvaisesti tunnustaudutte Kristuksen evankeliumiin ja näin vilpittömästi olette ruvenneet yhteyteen heidän kanssaan ja kaikkien kanssa."
+- Filippiläiskirje 1:7: "Ja oikein onkin, että minä näin ajattelen teitä kaikkia, koska te olette minun sydämessäni, te, jotka sekä ollessani kahleissa että evankeliumia puolustaessani ja vahvistaessani olette kaikki minun kanssani armosta osalliset."
+- Luukas 10:40: "Mutta Martta puuhasi monissa palvelustoimissa; ja hän tuli ja sanoi: "Herra, etkö sinä välitä mitään siitä, että sisareni on jättänyt minut yksinäni palvelemaan? Sano siis hänelle, että hän minua auttaisi.""
+- Markus 12:14: "Nämä tulivat ja sanoivat hänelle: "Opettaja, me tiedämme, että sinä olet totinen etkä välitä kenestäkään, sillä sinä et katso henkilöön, vaan opetat Jumalan tietä totuudessa. Onko luvallista antaa keisarille veroa vai ei? Tuleeko meidän antaa vai ei?""
+- Heprealaiskirje 13:17: "Olkaa kuuliaiset johtajillenne ja tottelevaiset, sillä he valvovat teidän sielujanne niinkuin ne, joiden on tehtävä tili, että he voisivat tehdä sitä ilolla eikä huokaillen; sillä se ei ole teille hyödyllistä."
+- 2. Korinttilaiskirje 12:13: "Sillä missä muussa te olette jääneet muita seurakuntia vähemmälle kuin siinä, etten minä puolestani ole rasittanut teitä? Antakaa minulle anteeksi tämä vääryys."
+- 2. Timoteuskirje 2:14: "Muistuta tästä, ja teroita heille Jumalan edessä, etteivät kiistelisi sanoista, mikä ei ole miksikään hyödyksi, vaan niiden turmioksi, jotka kuulevat."
+- 1. Timoteuskirje 5:17: "Vanhimpia, jotka seurakuntaa hyvin hoitavat, pidettäköön kahdenkertaisen kunnian ansainneina, varsinkin niitä, jotka sanassa ja opetuksessa työtä tekevät."
+
+--- 4 4. Terve Jännite Rakentaa, Huono Jännite Hajottaa ---
+
+- 1. Timoteuskirje 6:2: "Mutta ne, joilla on uskovaiset isännät, älkööt pitäkö heitä vähemmässä arvossa sentähden, että he ovat veljiä, vaan palvelkoot heitä sitä mieluummin, koska he ovat uskovia ja rakastettuja ja harrastavat hyväntekemistä. Tätä opeta ja tähän kehoita."
+- 1. Pietarin kirje 4:11: "Jos joku puhuu, puhukoon niinkuin Jumalan sanoja; jos joku palvelee, palvelkoon sen voiman mukaan, minkä Jumala antaa, että Jumala tulisi kaikessa kirkastetuksi Jeesuksen Kristuksen kautta. Hänen on kunnia ja valta aina ja iankaikkisesti. Amen."
+- Nehemia 1:6: "olkoon sinun korvasi tarkkaavainen ja silmäsi avoin kuullaksesi palvelijasi rukoukset, joita minä nyt päivät ja yöt rukoilen sinun edessäsi palvelijaisi, israelilaisten, puolesta, tunnustaen israelilaisten synnit, jotka me olemme tehneet sinua vastaan; sillä minäkin ja minun perhekuntani olemme syntiä tehneet!"
+- 1. Korinttilaiskirje 1:10: "Mutta minä kehoitan teitä, veljet, meidän Herramme Jeesuksen Kristuksen nimeen, että kaikki olisitte puheessa yksimieliset ettekä suvaitsisi riitaisuuksia keskuudessanne, vaan pysyisitte sovinnossa ja teillä olisi sama mieli ja sama ajatus."
+- Apostolien teot 6:3: "Valitkaa sentähden, veljet, keskuudestanne seitsemän miestä, joista on hyvä todistus ja jotka ovat Henkeä ja viisautta täynnä, niin me asetamme heidät tähän toimeen."
+- 2. Korinttilaiskirje 9:13: "kun he, tästä teidän palveluksestanne huomattuaan, kuinka taattu teidän mielenne on, ylistävät Jumalaa siitä, että te näin alistuvaisesti tunnustaudutte Kristuksen evankeliumiin ja näin vilpittömästi olette ruvenneet yhteyteen heidän kanssaan ja kaikkien kanssa."
+- Filippiläiskirje 1:7: "Ja oikein onkin, että minä näin ajattelen teitä kaikkia, koska te olette minun sydämessäni, te, jotka sekä ollessani kahleissa että evankeliumia puolustaessani ja vahvistaessani olette kaikki minun kanssani armosta osalliset."
+- 2. Korinttilaiskirje 5:12: "Emme nyt taas suosittele itseämme teille, vaan tahdomme antaa teille aihetta kerskata meistä, että teillä olisi mitä vastata niille, jotka kerskaavat siitä, mikä silmään näkyy, eikä siitä, mikä sydämessä on."
+- Markus 12:14: "Nämä tulivat ja sanoivat hänelle: "Opettaja, me tiedämme, että sinä olet totinen etkä välitä kenestäkään, sillä sinä et katso henkilöön, vaan opetat Jumalan tietä totuudessa. Onko luvallista antaa keisarille veroa vai ei? Tuleeko meidän antaa vai ei?""
+- 2. Timoteuskirje 2:15: "Pyri osoittautumaan Jumalalle semmoiseksi, joka koetukset kestää, työntekijäksi, joka ei työtään häpeä, joka oikein jakelee totuuden sanaa."
+- Kolossalaiskirje 1:9: "Sentähden emme mekään, siitä päivästä alkaen, jona sen kuulimme, ole lakanneet teidän edestänne rukoilemasta ja anomasta, että tulisitte täyteen hänen tahtonsa tuntemista kaikessa hengellisessä viisaudessa ja ymmärtämisessä,"
+- Jeremia 13:11: "Sillä niinkuin vyö liittyy miehen kupeisiin, niin minä liitin koko Israelin heimon ja koko Juudan heimon itseeni, sanoo Herra, että se olisi minun kansani, minulle kunniaksi, ylistykseksi ja kirkkaudeksi; mutta he eivät totelleet."
+- Jeremia 13:10: "Tämä paha kansa, joka ei tahdo kuulla minun sanojani, joka vaeltaa sydämensä paatumuksessa, seuraa muita jumalia, palvelee ja kumartaa niitä, tulee tämän vyön kaltaiseksi, joka ei mihinkään kelpaa."
+- 2. Timoteuskirje 2:14: "Muistuta tästä, ja teroita heille Jumalan edessä, etteivät kiistelisi sanoista, mikä ei ole miksikään hyödyksi, vaan niiden turmioksi, jotka kuulevat."
+- 2. Tessalonikalaiskirje 2:13: "Mutta me olemme velvolliset aina kiittämään Jumalaa teidän tähtenne, veljet, te Herran rakastetut, sentähden että Jumala alusta alkaen valitsi teidät pelastukseen Hengen pyhityksessä ja uskossa totuuteen."
+
+--- 5 5. Yhteenveto ---
+
+- 1. Timoteuskirje 6:2: "Mutta ne, joilla on uskovaiset isännät, älkööt pitäkö heitä vähemmässä arvossa sentähden, että he ovat veljiä, vaan palvelkoot heitä sitä mieluummin, koska he ovat uskovia ja rakastettuja ja harrastavat hyväntekemistä. Tätä opeta ja tähän kehoita."
+- 2. Korinttilaiskirje 9:13: "kun he, tästä teidän palveluksestanne huomattuaan, kuinka taattu teidän mielenne on, ylistävät Jumalaa siitä, että te näin alistuvaisesti tunnustaudutte Kristuksen evankeliumiin ja näin vilpittömästi olette ruvenneet yhteyteen heidän kanssaan ja kaikkien kanssa."
+- 1. Pietarin kirje 4:11: "Jos joku puhuu, puhukoon niinkuin Jumalan sanoja; jos joku palvelee, palvelkoon sen voiman mukaan, minkä Jumala antaa, että Jumala tulisi kaikessa kirkastetuksi Jeesuksen Kristuksen kautta. Hänen on kunnia ja valta aina ja iankaikkisesti. Amen."
+- 2. Korinttilaiskirje 5:12: "Emme nyt taas suosittele itseämme teille, vaan tahdomme antaa teille aihetta kerskata meistä, että teillä olisi mitä vastata niille, jotka kerskaavat siitä, mikä silmään näkyy, eikä siitä, mikä sydämessä on."
+- Kolossalaiskirje 1:9: "Sentähden emme mekään, siitä päivästä alkaen, jona sen kuulimme, ole lakanneet teidän edestänne rukoilemasta ja anomasta, että tulisitte täyteen hänen tahtonsa tuntemista kaikessa hengellisessä viisaudessa ja ymmärtämisessä,"
+- 2. Korinttilaiskirje 1:12: "Sillä meidän kerskauksemme on tämä: meidän omantuntomme todistus siitä, että me maailmassa ja varsinkin teidän luonanne olemme vaeltaneet Jumalan pyhyydessä ja puhtaudessa, emme lihallisessa viisaudessa, vaan Jumalan armossa."
+- Psalmit 40:5: "Autuas se mies, joka panee turvansa Herraan eikä käänny ylpeiden puoleen eikä niitten, jotka valheeseen eksyvät!"
+- 2. Tessalonikalaiskirje 1:4: "niin että me itsekin Jumalan seurakunnissa kerskaamme teistä, teidän kärsivällisyydestänne ja uskostanne kaikissa vainoissanne ja ahdistuksissa, joita teillä on kestettävänä"
+- Roomalaiskirje 8:28: "Mutta me tiedämme, että kaikki yhdessä vaikuttaa niiden parhaaksi, jotka Jumalaa rakastavat, niiden, jotka hänen aivoituksensa mukaan ovat kutsutut."
+- Miika 6:9: "Herran ääni huutaa kaupungille — ja ymmärtäväisyyttä on, että sinun nimestäsi otetaan vaari. Totelkaa vitsaa ja häntä, joka on sen määrännyt."
+- 5. Mooseksen kirja 26:19: "että hän asettaisi sinut korkeammaksi kaikkia luomiansa kansoja, ylistykseksi, kunniaksi ja kiitokseksi, ja että olisit Herralle, sinun Jumalallesi, pyhitetty kansa, niinkuin hän on puhunut.""
+- Filippiläiskirje 1:27: "Käyttäytykää vain Kristuksen evankeliumin arvon mukaisesti, että minä, tulinpa sitten teidän tykönne ja näin teidät tai olin tulematta, saan kuulla teistä, että te pysytte samassa hengessä ja yksimielisinä taistelette minun kanssani evankeliumin uskon puolesta,"
+- 1. Korinttilaiskirje 4:6: "Tämän olen, veljet, sovittanut itseeni ja Apollokseen, teidän tähtenne, että meistä oppisitte tämän: "Ei yli sen, mikä kirjoitettu on", ettette pöyhkeillen asettuisi mikä minkin puolelle toista vastaan."
+- Kolossalaiskirje 2:2: "että heidän sydämensä, yhteenliittyneinä rakkaudessa, saisivat kehoitusta omistamaan täyden ymmärtämyksen koko rikkauden ja pääsisivät tuntemaan Jumalan salaisuuden, Kristuksen,"
+- 1. Samuelin kirja 2:1: "Ja Hanna rukoili ja sanoi: "Minun sydämeni riemuitsee Herrassa; minun sarveni kohoaa korkealle Herrassa. Minun suuni on avartunut vihollisiani vastaan, sillä minä iloitsen sinun avustasi."
+
+Diagnostiikka valmis.

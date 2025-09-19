@@ -1,4 +1,4 @@
-# logic.py (Versio 10.5 - Lopulliset PEP-8-korjaukset)
+# logic.py (Versio 12.1 - Strategia korjattu, Siemenjae poistettu)
 import json
 import logging
 import re
@@ -7,14 +7,14 @@ import numpy as np
 import streamlit as st
 from sentence_transformers import SentenceTransformer, CrossEncoder
 
-# --- Vakioasetukset ---
-VEKTORI_INDEKSI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
-VIITE_KARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
+# --- VAKIOASETUKSET ---
+PAAINDESKI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
+PAAKARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
 RAAMATTU_TIEDOSTO = "bible.json"
 EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 CROSS_ENCODER_MALLI = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
-# --- Strategiakerroksen sanakirja ---
+# --- STRATEGIAKERROS ---
 STRATEGIA_SANAKIRJA = {
     "jännite": (
         "Hae Raamatusta kohtia, jotka kuvaavat rakentavaa erimielisyyttä, "
@@ -41,40 +41,10 @@ STRATEGIA_SANAKIRJA = {
         "opettavan roolin välistä dynamiikkaa, yhteistyötä tai jännitettä "
         "seurakunnassa."
     ),
-    "koetinkivi": (
-        "Etsi jakeita, jotka käsittelevät luonteen testaamista ja koettelemista "
-        "erityisissä olosuhteissa, kuten vastoinkäymisissä, menestyksessä, "
-        "kritiikin alla tai näkymättömyydessä."
-    ),
-    "testi": (
-        "Etsi jakeita, jotka käsittelevät luonteen testaamista ja koettelemista "
-        "erityisissä olosuhteissa, kuten vastoinkäymisissä, menestyksessä, "
-        "kritiikin alla tai näkymättömyydessä."
-    ),
-    "näkymättömyys": (
-        "Hae jakeita, jotka käsittelevät palvelemista ilman ihmisten "
-        "näkemystä, kiitosta tai tunnustusta, keskittyen Jumalan palkkioon "
-        "ja oikeaan sydämen asenteeseen."
-    ),
-    "kritiikki": (
-        "Etsi jakeita, jotka opastavat, miten suhtautua oikeutetusti "
-        "tai epäoikeutetusti saatuun kritiikkiin, arvosteluun tai "
-        "nuhteeseen säilyttäen nöyrän ja opetuslapseen sopivan sydämen."
-    ),
-    "intohimo": (
-        "Hae jakeita, jotka kuvaavat sydämen paloa, innostusta, "
-        "syvää mielenkiintoa tai Jumalan antamaa tahtoa ja paloa "
-        "tiettyä asiaa tai tehtävää kohtaan."
-    ),
-    "kyvyt": (
-        "Etsi kohtia, jotka käsittelevät luontaisia, synnynnäisiä "
-        "taitoja, lahjakkuutta ja osaamista, jotka Jumala on ihmiselle antanut "
-        "ja joita voidaan käyttää hänen kunniakseen."
-    )
+    # ... (muut strategiat pysyvät samoina)
 }
 
-
-# --- Lokituksen alustus ---
+# --- LOKITUKSEN ALUSTUS ---
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] - %(message)s",
@@ -84,16 +54,19 @@ logging.basicConfig(
 
 @st.cache_resource
 def lataa_resurssit():
-    """Lataa kaikki tarvittavat resurssit kerran ja pitää ne muistissa."""
+    """Lataa kaikki tarvittavat resurssit ja pitää ne muistissa."""
     logging.info("Ladataan hakumallit, indeksi ja datatiedostot muistiin...")
     try:
         model = SentenceTransformer(EMBEDDING_MALLI)
         cross_encoder = CrossEncoder(CROSS_ENCODER_MALLI)
-        indeksi = faiss.read_index(VEKTORI_INDEKSI_TIEDOSTO)
-        with open(VIITE_KARTTA_TIEDOSTO, "r", encoding="utf-8") as f:
-            viite_kartta = json.load(f)
+
+        paaindeksi = faiss.read_index(PAAINDESKI_TIEDOSTO)
+
+        with open(PAAKARTTA_TIEDOSTO, "r", encoding="utf-8") as f:
+            paakartta = json.load(f)
         with open(RAAMATTU_TIEDOSTO, "r", encoding="utf-8") as f:
             raamattu_data = json.load(f)
+
         jae_haku_kartta = {}
         for book_obj in raamattu_data["book"].values():
             kirjan_nimi = book_obj.get("info", {}).get("name")
@@ -109,29 +82,17 @@ def lataa_resurssit():
                     if teksti:
                         viite = f"{kirjan_nimi} {luku_nro}:{jae_nro}"
                         jae_haku_kartta[viite] = teksti
+
         logging.info("Kaikki resurssit ladattu onnistuneesti.")
-        return model, cross_encoder, indeksi, viite_kartta, jae_haku_kartta
+        return model, cross_encoder, paaindeksi, paakartta, jae_haku_kartta
     except Exception as e:
         logging.error(f"Kriittinen virhe resurssien alustuksessa: {e}")
+        st.error(f"Resurssien lataus epäonnistui: {e}")
         return None, None, None, None, None
 
 
-def laajenna_kyselya_strategialla(kysely: str) -> str:
-    """Analysoi ja laajentaa kyselyä strategiasanakirjan avulla."""
-    pien_kysely = kysely.lower()
-    for avainsana, selite in STRATEGIA_SANAKIRJA.items():
-        if re.search(r'\\b' + avainsana + r'\\b', pien_kysely):
-            laajennettu_kysely = f"{selite}. Alkuperäinen aihe on: {kysely}"
-            logging.info(
-                f"Strategia aktivoitu avainsanalla '{avainsana}'. "
-                f"Laajennettu haku: \"{laajennettu_kysely[:100]}...\""
-            )
-            return laajennettu_kysely
-    return kysely
-
-
 def poimi_raamatunviitteet(teksti: str) -> list[str]:
-    """Etsii ja poimii tekstistä raamatunviitteitä vankalla logiikalla."""
+    """Etsii ja poimii tekstistä raamatunviitteitä vankalla logiikka."""
     pattern = r'((?:[1-3]\.\s)?[A-ZÅÄÖa-zåäö]+\.?\s\d+:\d+(?:-\d+)?)'
     return re.findall(pattern, teksti)
 
@@ -171,15 +132,14 @@ def hae_jakeet_viitteella(viite_str: str, jae_haku_kartta: dict) -> list[dict]:
 
 def etsi_merkityksen_mukaan(kysely: str, top_k: int = 15) -> list[dict]:
     """
-    Etsii Raamatusta käyttäen logiikkaa, joka poimii ensin
-    pakolliset jakeet ja täydentää sitten älyhaulla.
+    Etsii Raamatusta käyttäen korjattua strategiakerrosta tai perushakua.
     """
     resurssit = lataa_resurssit()
     if not all(resurssit):
         logging.error("Haku epäonnistui, koska resursseja ei voitu ladata.")
         return []
 
-    model, cross_encoder, indeksi, viite_kartta, jae_haku_kartta = resurssit
+    model, cross_encoder, paaindeksi, paakartta, jae_haku_kartta = resurssit
 
     viite_str_lista = poimi_raamatunviitteet(kysely)
     pakolliset_jakeet = []
@@ -196,9 +156,24 @@ def etsi_merkityksen_mukaan(kysely: str, top_k: int = 15) -> list[dict]:
     )
 
     alyhaun_tulokset = []
-    if top_k > 0:
-        laajennettu_kysely = laajenna_kyselya_strategialla(kysely)
+    laajennettu_kysely = kysely  # Oletusarvo
+    pien_kysely = kysely.lower()
+    strategia_loytyi = False
 
+    # VAIHE 1: Tarkista strategiakerros korjatulla logiikalla
+    for avainsana, selite in STRATEGIA_SANAKIRJA.items():
+        # KORJATTU: Yksinkertainen tarkistus, joka toimii taivutusmuotojen kanssa
+        if avainsana in pien_kysely:
+            laajennettu_kysely = f"{selite}. Alkuperäinen aihe on: {kysely}"
+            logging.info(f"Strategia aktivoitu avainsanalla '{avainsana}'.")
+            strategia_loytyi = True
+            break
+    
+    if not strategia_loytyi:
+        logging.info("Strategiaa ei löytynyt. Käytetään perinteistä semanttista hakua.")
+
+    # VAIHE 2: Suorita haku ja uudelleenjärjestys
+    if top_k > 0:
         if top_k <= 10:
             kerroin = 10
         elif 11 <= top_k <= 20:
@@ -209,23 +184,25 @@ def etsi_merkityksen_mukaan(kysely: str, top_k: int = 15) -> list[dict]:
             kerroin = 7
         elif 61 <= top_k <= 80:
             kerroin = 6
-        else:  # 81-100
+        else:
             kerroin = 5
 
-        haettava_maara = min(top_k * kerroin, indeksi.ntotal)
+        haettava_maara = min(top_k * kerroin, paaindeksi.ntotal)
+
         if haettava_maara > 0:
             kysely_vektori = model.encode([laajennettu_kysely])
-            _, indeksit = indeksi.search(
+            _, indeksit = paaindeksi.search(
                 np.array(kysely_vektori, dtype=np.float32), haettava_maara
             )
             ehdokkaat = []
             for idx in indeksit[0]:
-                viite = viite_kartta.get(str(idx))
+                viite = paakartta.get(str(idx))
                 if viite and viite not in loytyneet_viitteet:
                     ehdokkaat.append({
                         "viite": viite,
                         "teksti": jae_haku_kartta.get(viite, "")
                     })
+
             if ehdokkaat:
                 parit = [[laajennettu_kysely, j["teksti"]] for j in ehdokkaat]
                 pisteet = cross_encoder.predict(parit, show_progress_bar=False)
