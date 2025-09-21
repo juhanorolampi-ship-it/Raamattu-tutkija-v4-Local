@@ -1,4 +1,4 @@
-# logic.py (Versio 12.1 - Strategia korjattu, Siemenjae poistettu)
+# logic.py (Versio 14.0 - Manuaalinen kartoitus)
 import json
 import logging
 import re
@@ -41,8 +41,53 @@ STRATEGIA_SANAKIRJA = {
         "opettavan roolin välistä dynamiikkaa, yhteistyötä tai jännitettä "
         "seurakunnassa."
     ),
-    # ... (muut strategiat pysyvät samoina)
+    "koetinkivi": (
+        "Etsi jakeita, jotka käsittelevät luonteen testaamista ja koettelemista "
+        "erityisissä olosuhteissa, kuten vastoinkäymisissä, menestyksessä, "
+        "kritiikin alla tai näkymättömyydessä."
+    ),
+    "testi": (
+        "Etsi jakeita, jotka käsittelevät luonteen testaamista ja koettelemista "
+        "erityisissä olosuhteissa, kuten vastoinkäymisissä, menestyksessä, "
+        "kritiikin alla tai näkymättömyydessä."
+    ),
+    "näkymättömyys": (
+        "Hae jakeita, jotka käsittelevät palvelemista ilman ihmisten "
+        "näkemystä, kiitosta tai tunnustusta, keskittyen Jumalan palkkioon "
+        "ja oikeaan sydämen asenteeseen."
+    ),
+    "kritiikki": (
+        "Etsi jakeita, jotka opastavat, miten suhtautua oikeutetusti "
+        "tai epäoikeutetusti saatuun kritiikkiin, arvosteluun tai "
+        "nuhteeseen säilyttäen nöyrän ja opetuslapseen sopivan sydämen."
+    ),
+    "intohimo": (
+        "Hae jakeita, jotka kuvaavat sydämen paloa, innostusta, "
+        "syvää mielenkiintoa tai Jumalan antamaa tahtoa ja paloa "
+        "tiettyä asiaa tai tehtävää kohtaan."
+    ),
+    "kyvyt": (
+        "Etsi kohtia, jotka käsittelevät luontaisia, synnynnäisiä "
+        "taitoja, lahjakkuutta ja osaamista, jotka Jumala on ihmiselle antanut "
+        "ja joita voidaan käyttää hänen kunniakseen."
+    )
 }
+
+# UUSI MANUAALINEN KARTTA STRATEGIOIDEN JA SIEMENJAKEIDEN VÄLILLÄ
+STRATEGIA_SIEMENJAE_KARTTA = {
+    "jännite": "Room. 12:4-5",
+    "tasapaino": "Saarn. 3:1",
+    "profeetta": "Ef. 4:11-12",
+    "paimen": "Ef. 4:11-12",
+    "pappi": "Ef. 4:11-12",
+    "koetinkivi": "Jaak. 1:2-4",
+    "testi": "Jaak. 1:2-4",
+    "näkymättömyys": "Fil. 2:3-4",
+    "kritiikki": "Miika 6:8",
+    "intohimo": "Room. 12:1-2",
+    "kyvyt": "1. Piet. 4:10",
+}
+
 
 # --- LOKITUKSEN ALUSTUS ---
 logging.basicConfig(
@@ -59,9 +104,7 @@ def lataa_resurssit():
     try:
         model = SentenceTransformer(EMBEDDING_MALLI)
         cross_encoder = CrossEncoder(CROSS_ENCODER_MALLI)
-
         paaindeksi = faiss.read_index(PAAINDESKI_TIEDOSTO)
-
         with open(PAAKARTTA_TIEDOSTO, "r", encoding="utf-8") as f:
             paakartta = json.load(f)
         with open(RAAMATTU_TIEDOSTO, "r", encoding="utf-8") as f:
@@ -92,7 +135,7 @@ def lataa_resurssit():
 
 
 def poimi_raamatunviitteet(teksti: str) -> list[str]:
-    """Etsii ja poimii tekstistä raamatunviitteitä vankalla logiikka."""
+    """Etsii ja poimii tekstistä raamatunviitteitä."""
     pattern = r'((?:[1-3]\.\s)?[A-ZÅÄÖa-zåäö]+\.?\s\d+:\d+(?:-\d+)?)'
     return re.findall(pattern, teksti)
 
@@ -132,7 +175,7 @@ def hae_jakeet_viitteella(viite_str: str, jae_haku_kartta: dict) -> list[dict]:
 
 def etsi_merkityksen_mukaan(kysely: str, top_k: int = 15) -> list[dict]:
     """
-    Etsii Raamatusta käyttäen korjattua strategiakerrosta tai perushakua.
+    Etsii Raamatusta käyttäen manuaalisesti kartoitettua hybridihakua.
     """
     resurssit = lataa_resurssit()
     if not all(resurssit):
@@ -156,23 +199,39 @@ def etsi_merkityksen_mukaan(kysely: str, top_k: int = 15) -> list[dict]:
     )
 
     alyhaun_tulokset = []
-    laajennettu_kysely = kysely  # Oletusarvo
+    laajennettu_kysely = kysely
     pien_kysely = kysely.lower()
     strategia_loytyi = False
 
-    # VAIHE 1: Tarkista strategiakerros korjatulla logiikalla
+    # VAIHE 1: Tarkista, aktivoituuko jokin strategia
     for avainsana, selite in STRATEGIA_SANAKIRJA.items():
-        # KORJATTU: Yksinkertainen tarkistus, joka toimii taivutusmuotojen kanssa
         if avainsana in pien_kysely:
-            laajennettu_kysely = f"{selite}. Alkuperäinen aihe on: {kysely}"
-            logging.info(f"Strategia aktivoitu avainsanalla '{avainsana}'.")
             strategia_loytyi = True
+            logging.info(f"Strategia aktivoitu avainsanalla '{avainsana}'.")
+
+            # VAIHE 2: Hae manuaalisesti kartoitettu siemenjae
+            siemenjae_viite = STRATEGIA_SIEMENJAE_KARTTA.get(avainsana)
+            if siemenjae_viite:
+                siemenjae_teksti = jae_haku_kartta.get(siemenjae_viite, "")
+                logging.info(f"Manuaalisesti valittu siemenjae: {siemenjae_viite}")
+                # VAIHE 3: Rakenna "superkysely"
+                laajennettu_kysely = (
+                    f"Aihe on: '{kysely}'. Teeman selitys on: '{selite}'. "
+                    f"Tärkeä esimerkki aiheesta on jae '{siemenjae_viite}', "
+                    f"joka kuuluu: '{siemenjae_teksti}'."
+                )
+                logging.info("Rakennettu 'superkysely' strategian ja siemenjakeen pohjalta.")
+            else:
+                # Varasuunnitelma, jos kartasta ei löydy avainsanaa
+                laajennettu_kysely = f"{selite}. Alkuperäinen aihe on: {kysely}"
+                logging.info("Ei siemenjaetta määritelty, käytetään vain strategiaa.")
             break
-    
+
     if not strategia_loytyi:
         logging.info("Strategiaa ei löytynyt. Käytetään perinteistä semanttista hakua.")
+        laajennettu_kysely = kysely
 
-    # VAIHE 2: Suorita haku ja uudelleenjärjestys
+    # VAIHE 4: Suorita haku ja uudelleenjärjestys
     if top_k > 0:
         if top_k <= 10:
             kerroin = 10

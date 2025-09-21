@@ -150,7 +150,6 @@ st.markdown("---")
 st.subheader("Hakutulokset")
 
 if suorita_nappi:
-    # --- UUSI, KORJATTU LOGIIKKA SYÖTTEIDEN YHDISTÄMISEEN ---
     syote_tiedostosta = ""
     if uploaded_file is not None:
         syote_tiedostosta = uploaded_file.getvalue().decode("utf-8")
@@ -158,7 +157,6 @@ if suorita_nappi:
 
     syote_tekstikentasta = syote_alue.strip()
     
-    # Yhdistetään sisällöt, jos molemmat ovat olemassa
     koko_syote = (syote_tiedostosta + "\n\n" + syote_tekstikentasta).strip()
     
     if not koko_syote:
