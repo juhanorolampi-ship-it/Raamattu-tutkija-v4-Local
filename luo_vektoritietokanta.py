@@ -6,9 +6,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # --- MÄÄRITYKSET ---
-RAAMATTU_TIEDOSTO = "bible.json"
-VEKTORI_INDEKSI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
-VIITE_KARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
+RAAMATTU_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/bible.json"
+VEKTORI_INDEKSI_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/raamattu_vektori_indeksi.faiss"
+VIITE_KARTTA_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/raamattu_viite_kartta.json"
 EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 
 logging.basicConfig(

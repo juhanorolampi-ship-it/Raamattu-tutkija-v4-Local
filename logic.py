@@ -8,9 +8,9 @@ import streamlit as st
 from sentence_transformers import SentenceTransformer, CrossEncoder
 
 # --- VAKIOASETUKSET ---
-PAAINDESKI_TIEDOSTO = "raamattu_vektori_indeksi.faiss"
-PAAKARTTA_TIEDOSTO = "raamattu_viite_kartta.json"
-RAAMATTU_TIEDOSTO = "bible.json"
+PAAINDESKI_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/raamattu_vektori_indeksi.faiss"
+PAAKARTTA_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/raamattu_viite_kartta.json"
+RAAMATTU_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/bible.json"
 EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 CROSS_ENCODER_MALLI = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 

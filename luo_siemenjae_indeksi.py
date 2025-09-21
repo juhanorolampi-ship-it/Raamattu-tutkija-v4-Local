@@ -6,9 +6,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # --- MÄÄRITYKSET ---
-RAAMATTU_TIEDOSTO = "bible.json"
-SIEMENJAE_INDEKSI_TIEDOSTO = "siemenjae_indeksi.faiss"
-SIEMENJAE_KARTTA_TIEDOSTO = "siemenjae_kartta.json"
+RAAMATTU_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/bible.json"
+SIEMENJAE_INDEKSI_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/siemenjae_indeksi.faiss"
+SIEMENJAE_KARTTA_TIEDOSTO = "D:/Python_AI/Raamattu-tutkija-data/siemenjae_kartta.json"
 EMBEDDING_MALLI = "TurkuNLP/sbert-cased-finnish-paraphrase"
 
 # --- KURATOITU LISTA SUPERJAKEISTA ---
